@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+/*HEADER & NAVIGATION*/
+.hdr{
+	background-color: black;
+	border-style: solid;
+	border-color: red;
+	padding: 5px;
+}
+
+.logo{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*HEADER & NAVIGATION END*/
+
+.grp{
+	background-color: black;
+	border-color: red;
+	text-align: center;
+	padding: 5px;
+	border-style: solid;
+	margin-top: 5px;
+	padding-top: 50px;
+	padding-bottom: 390px;
+	margin-bottom: 10px;
+}
+
+.grp div{
+	padding: 10px;
+	color: yellowgreen;
+}
+
+.ftr{
+	border-style: solid;
+	text-align: center;
+	
+	padding-bottom: 5px;
+	color: yellowgreen;
+	background-color: black;
+	font-weight: bold;
+	border-color: red;
+}
