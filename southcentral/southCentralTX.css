@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	align-items: center;
+	background-color: black;
+} 
+						/*HEADER & NAVIGATION*/
+
+.hdr{
+	display: flex;
+	border-style: solid;
+	border-color: red;
+	background-color: black;
+}
+
+.hdr .logo-ops{
+	display: inline-block;
+	border-style: solid;
+	border-color: none;
+}
+
+.hdr .h1-ops{
+	display: inline;
+	border-style: none;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+.logo{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: block;
+	margin-left: 10px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	width: 160px;
+	height: 40px;
+}
+
+.region{
+	text-align: center;
+	border-style: solid;
+	margin-top: 5px;
+	background-color: black;
+	color: yellowgreen;
+	border-color: red;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.region .scl{
+	color: white;
+}					/*HEADER & NAVIGATION END*/
+
+					/*LEFT & RIGHT*/
+.fll{
+	display: flex;
+	margin-top: 30px;
+	justify-content: center;
+}
+
+					/*LEFT PART*/
+.fll .lft-side{
+	border-style: none;
+	margin-right: 50px;
+}
+
+.button{
+	border-style: solid;
+	border-color: yellowgreen;
+	background-color: black;
+	margin-top: 10px;
+	display: flex;
+	padding: 10px;
+	width: 330px;
+	justify-content: space-between;
+
+}
+
+.button .btn{
+	color: white;
+	background-color: black;
+	height: 30px;
+	border-color: white;
+	width: 70px;
+}
+
+.grp{
+	border-style: solid;
+	border-color: yellowgreen;
+	margin-top: 10px;
+	max-height: 350px;
+	max-width: 325px;
+	display: flex;
+}
+
+
+.grp .tier1{
+	display: block;
+	border-style: solid;
+	border-color: yellowgreen;
+	min-width: 320px;
+	height: 320px;
+	line-height: 20px;
+	text-align: left;
+	background-color: black;
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.grp .tier2{
+	display: none;
+	border-style: solid;
+	border-color: yellowgreen;
+	min-width: 320px;
+	height: 320px;
+	line-height: 20px;
+	text-align: left;
+	background-color: black;
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.grp .tier3{
+	display: none;
+	border-style: solid;
+	border-color: yellowgreen;
+	min-width: 320px;
+	height: 320px;
+	line-height: 20px;
+	text-align: left;
+	background-color: black;
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.grp .btn{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	width: 100px;
+}
+
+
+.grp .tier2 .header{
+	text-align: center;
+}
+
+.grp .tier3 .header{
+	text-align: right;
+	padding-right: 10px;
+}
+
+.fll .ryt-side{
+	border-style: solid;
+	margin-left: 50px;
+}						/*LEFT SIDE END*/
+
+.ryt-side .atr-t1{
+	display: block;
+}
+
+.ryt-side .atr-t2{
+	display: none;
+}
+
+.ryt-side .atr-t3{
+	display: none;
+}
+
+.ryt-side .tmc-t1{
+	display: none;
+}
+
+.svc-type{
+	border-style: solid;
+	border-color: white;
+	text-align: center;
+	color: yellowgreen;
+}
+
+.brder{
+	border-style: solid;
+	border-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: yellowgreen;
+}
+
+.brder1{
+	border-style: solid;
+	border-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: black;
+	background-color: yellow;
+}
