@@ -6,9 +6,6 @@
 	align-items: center;
 	background-color: black;
 } 
-
-/*just for changes*/
-/*just for changes2*/
 						/*HEADER & NAVIGATION*/
 
 .hdr{
@@ -149,7 +146,12 @@
 	border-style: solid;
 	border-color: white;
 	color: white;
-	width: 100px;
+	width: 290px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	align-items: center;
 }
 
 
@@ -166,6 +168,7 @@
 	border-style: solid;
 	margin-left: 50px;
 }						/*LEFT SIDE END*/
+						/*LEFT SIDE FUNCTIONALITY*/
 
 .ryt-side .atr-t1{
 	display: block;
@@ -183,6 +186,28 @@
 	display: none;
 }
 
+.ryt-side .tmc-t2{
+	display: none;
+}
+
+.ryt-side .tmc-t3{
+	display: none;
+}
+
+.ryt-side .cni-t1{
+	display: none;
+}
+
+.ryt-side .cni-t2{
+	display: none;
+}
+
+.ryt-side .cni-t3{
+	display: none;
+}
+
+					/*LEFT SIDE FUNCTIONALITY END*/
+
 .svc-type{
 	border-style: solid;
 	border-color: white;
@@ -198,6 +223,7 @@
 	padding-bottom: 5px;
 	padding-top: 5px;
 	color: yellowgreen;
+	font-weight: 600;
 }
 
 .brder1{
@@ -209,4 +235,5 @@
 	padding-top: 5px;
 	color: black;
 	background-color: yellow;
+	font-weight: 600;
 }
