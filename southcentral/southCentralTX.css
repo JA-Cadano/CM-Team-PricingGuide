@@ -67,7 +67,7 @@
 					/*LEFT PART*/
 .fll .lft-side{
 	border-style: none;
-	margin-right: 50px;
+	margin-right: 15px;
 }
 
 .button{
@@ -98,7 +98,6 @@
 	max-width: 325px;
 	display: flex;
 }
-
 
 .grp .tier1{
 	display: block;
@@ -166,8 +165,114 @@
 
 .fll .ryt-side{
 	border-style: solid;
-	margin-left: 50px;
-}						/*LEFT SIDE END*/
+	margin-left: 15px;
+}	
+
+			/*MID SIDE*/
+
+.tnfsComputation{
+	border-style: solid;
+	border-color: yellowgreen;
+	margin-top: 10px;
+	height: 130px;
+	width: 350px;
+	
+}
+
+.tnfsComputation .header{
+	color: white;
+	text-align: center;
+	
+}
+
+.tnfsComputation .dsg{
+	font-size: 18px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.tnfsComputation .dsg .mlg{
+	color: black;
+	text-align: center;
+	width: 75px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: yellowgreen;
+	font-size: 18px;
+}
+
+.mid-side .calculation{
+	justify-content: center;
+	border-style: solid;
+	border-color: yellowgreen;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+}
+
+.mid-side .calculation .s-type{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	height: 70px;
+	justify-content: center;
+	align-items: center;
+}
+
+.mid-side .calculation .s-type .svc{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 40px;
+}
+
+.mid-side .calculation .tmc-content{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	height: 190px;
+	justify-content: center;
+	align-items: center;
+}
+
+.mid-side .calculation .tmc-content .sthdr{
+	color: white;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.mid-side .calculation .tmc-content .tmc{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	width: 100px;
+	margin-left: 20px;
+}
+
+				/*LEFT SIDE END*/
 						/*LEFT SIDE FUNCTIONALITY*/
 
 .ryt-side .atr-t1{
