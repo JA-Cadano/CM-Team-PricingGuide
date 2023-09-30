@@ -69,6 +69,36 @@ function showHide3(){
 	oth3.style.display = "none";
 } /*SHOW TIER BUTTON END*/
 
+function ch(){
+	var m = Number(document.getElementById("mlg").value);
+	var t = Number(document.getElementById("tch").value);
+	var tr = Number(document.getElementById("trp").value);
+
+	if(m < 40){
+		document.getElementById("tr").value = "1";
+	}else if(m < 70){
+		document.getElementById("tr").value = "2";
+	}else{
+		document.getElementById("tr").value = "3";
+	}
+
+	var n1 = m * t * 2 * tr * 0.13;
+	var x = n1 % 5;
+
+	document.getElementById("fs").value = n1.toFixed(2);
+
+	if(n1 < 25){
+		document.getElementById("finalresult").value = 25;
+	}else{
+		document.getElementById("finalresult").value = (n1 - x) + 5;
+	}
+}
+
+function tmc(){
+	var x = Number(document.getElementById("mlg").value);
+	document.getElementById("prc").value = x;
+}
+
 /*RIGHT SIDE FUNCTIONALITY*/
 function showATR1(){
 	atr1.style.display = "block";
