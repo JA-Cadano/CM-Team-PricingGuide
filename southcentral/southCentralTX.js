@@ -10,24 +10,63 @@ let tmc3 = document.querySelector(".tmc-t3");
 let cni1 = document.querySelector(".cni-t1");
 let cni2 = document.querySelector(".cni-t2");
 let cni3 = document.querySelector(".cni-t3");
+let oth1 = document.querySelector(".oth-t1");
+let oth2 = document.querySelector(".oth-t2");
+let oth3 = document.querySelector(".oth-t3");
 
 /* SHOW TIER BUTTON*/
 function showHide1(){
 	showTier1.style.display = "block";
 	showTier2.style.display = "none";
 	showTier3.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc1.style.display = "block";
+	tmc2.style.display = "none";
+	tmc3.style.display = "none";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showHide2(){
 	showTier2.style.display = "block";
 	showTier1.style.display = "none";
 	showTier3.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc1.style.display = "none";
+	tmc2.style.display = "block";
+	tmc3.style.display = "none";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showHide3(){
 	showTier3.style.display = "block";
 	showTier2.style.display = "none";
 	showTier1.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc1.style.display = "none";
+	tmc2.style.display = "none";
+	tmc3.style.display = "block";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 } /*SHOW TIER BUTTON END*/
 
 /*RIGHT SIDE FUNCTIONALITY*/
@@ -41,6 +80,9 @@ function showATR1(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showATR2(){
@@ -53,6 +95,9 @@ function showATR2(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showATR3(){
@@ -65,6 +110,9 @@ function showATR3(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showTMC1(){
@@ -77,6 +125,9 @@ function showTMC1(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showTMC2(){
@@ -89,6 +140,9 @@ function showTMC2(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showTMC3(){
@@ -101,6 +155,9 @@ function showTMC3(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showCNI1(){
@@ -113,6 +170,9 @@ function showCNI1(){
 	cni1.style.display = "block";
 	cni2.style.display = "none";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showCNI2(){
@@ -125,6 +185,9 @@ function showCNI2(){
 	cni1.style.display = "none";
 	cni2.style.display = "block";
 	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
 }
 
 function showCNI3(){
@@ -137,5 +200,53 @@ function showCNI3(){
 	cni1.style.display = "none";
 	cni2.style.display = "none";
 	cni3.style.display = "block";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
+}
+
+function showOTH1(){
+	tmc1.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc2.style.display = "none";
+	tmc3.style.display = "none";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "block";
+	oth2.style.display = "none";
+	oth3.style.display = "none";
+}
+
+function showOTH2(){
+	tmc1.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc2.style.display = "none";
+	tmc3.style.display = "none";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "block";
+	oth3.style.display = "none";
+}
+
+function showOTH3(){
+	tmc1.style.display = "none";
+	atr1.style.display = "none";
+	atr2.style.display = "none";
+	atr3.style.display = "none";
+	tmc2.style.display = "none";
+	tmc3.style.display = "none";
+	cni1.style.display = "none";
+	cni2.style.display = "none";
+	cni3.style.display = "none";
+	oth1.style.display = "none";
+	oth2.style.display = "none";
+	oth3.style.display = "block";
 }
 /*RIGHT SIDE FUNCTIONALITY END*/
