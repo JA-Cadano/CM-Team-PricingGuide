@@ -14,6 +14,9 @@ let oth1 = document.querySelector(".oth-t1");
 let oth2 = document.querySelector(".oth-t2");
 let oth3 = document.querySelector(".oth-t3");
 
+
+
+
 /* SHOW TIER BUTTON*/
 function showHide1(){
 	showTier1.style.display = "block";
@@ -89,15 +92,70 @@ function ch(){
 
 	if(n1 < 25){
 		document.getElementById("finalresult").value = 25;
+	}else if(n1 > 25 && x == 0){
+		document.getElementById("finalresult").value = n1;
 	}else{
 		document.getElementById("finalresult").value = (n1 - x) + 5;
 	}
 }
 
-function tmc(){
-	var x = Number(document.getElementById("mlg").value);
-	document.getElementById("prc").value = x;
+function reset(){
+	document.getElementById("psn").value = 0;
 }
+
+function tmc(){
+	var trs = document.getElementById("tr").value;
+	
+	var h2 = 0;
+	var p2 = 0;
+	var h3 = 0;
+	var p3 = 0;
+	var h4 = 0;
+	var h4h = 0;
+	var p4 = 0;
+	var hph = 0;
+
+	if(trs == 1){
+		h2 = 140;
+		p2 = 85;
+		h3 = 190;
+		p3 = 125;
+		h4 = 230;
+		h4h = 55;
+		p4 = 160;
+		hph = 40;
+	}else if(trs == 2){
+		h2 = 160;
+		p2 = 95;
+		h3 = 210;
+		p3 = 135;
+		h4 = 260;
+		h4h = 60;
+		p4 = 180;
+		hph = 45;
+	}else{
+		h2 = 190;
+		p2 = 110;
+		h3 = 245;
+		p3 = 150;
+		h4 = 290;
+		h4h = 65;
+		p4 = 200;
+		hph = 50;
+	}
+
+	var nperson = document.getElementById("psn").value;
+	var	tmchr = document.getElementById("tmc").value;
+	if(tmchr == 2){
+		document.getElementById("prc").value = h2 + ((nperson-1)*p2);
+	} else if(tmchr == 3){
+		document.getElementById("prc").value = h3 + ((nperson-1)*p3);
+	} else if(tmchr == 4){
+		document.getElementById("prc").value = h4 + ((nperson-1)*p4);
+	}else if(tmchr > 4){
+		document.getElementById("prc").value = h4 + ((nperson-1)*p4) + ((tmchr -4)*h4h) + ((tmchr - 4)* hph * (nperson-1))
+	}
+} 
 
 /*RIGHT SIDE FUNCTIONALITY*/
 function showATR1(){

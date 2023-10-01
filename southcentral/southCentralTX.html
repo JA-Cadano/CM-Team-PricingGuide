@@ -47,6 +47,7 @@
 
 	<section class="fll"> 		<!---------BODY--------->
 		<div class="lft-side">	<!--TIER & SVC TYPE SELECTION-->
+			<div>
 			<div class="button">
 				<button onclick="showHide1()" class="btn">TIER-1</button>
 				<button onclick="showHide2()" class="btn">TIER-2</button>
@@ -76,21 +77,23 @@
 					<button onclick="showOTH3()" class="btn">BLUETOOTH & DATABASE <br> GPS & TRT <br> WAVE TRONICS</button>
 				</section>
 			</div>
+			</div>
 		</div>	              <!--TIER & SVC TYPE SELECTION END LEFT SIDE-->
-		<div class="mid-side">				  <!--MIDDLE PART-->
+		<div class="mid-side">
+			<div>				  <!--MIDDLE PART-->
 			<div class="tnfsComputation">
+				<div>
 				<h4 class="header">CALCULATE TIER & FUEL SURCHARGE</h4>
 				<div class="dsg">
 					Mileage: <input type="text" name="milage" id="mlg" class="mlg" onchange="ch()">
-					TIER: <input type="read-only" name="tr" id="tr" class="mlg" disabled/>
-				</div>
-				<div class="dsg">
+					TIER: <input type="text" name="tr" id="tr" class="mlg" disabled/>
 					Tech: <input type="text" name="tech" id="tch" class="mlg" value="1">
-					Trip: <input type="text" name="roundtrip" id="trp" class="mlg" value="2">
 				</div>
 				<div class="dsg">
+					Trip: <input type="text" name="roundtrip" id="trp" class="mlg" value="2">
 					F Surcharge: <input type="text" name="fuel" class="mlg" id="fs" disabled/>
 					<input type="text" name="finalresult" id="finalresult" class="mlg" disabled/>
+				</div>
 				</div>
 			</div>
 			<div class="calculation">
@@ -101,11 +104,12 @@
 				</div>
 				<section class="tmc-content">
 					<h2 class="sthdr">TMC</h2>
-					Number of Hours: <input type="text" name="tmc" class="tmc" id="tmc"><br><br>
+					Number of Hours: <input type="text" name="tmc" class="tmc" id="tmc" onchange="reset()"><br><br>
 					Number of Person: <input type="text" name="tmc" class="tmc" id="psn" onchange="tmc()"><br><br>
 					TMC Price: <input type="text" name="tmc" class="tmc" id="prc" disabled/>
 				</section>
 			</div>
+			</div>	
 		</div>
 
 		<div class="ryt-side">	<!--TIER 1 ATR DISPLAY-->
