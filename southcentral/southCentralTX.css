@@ -158,7 +158,6 @@
 	align-items: center;
 }
 
-
 .grp .tier2 .header{
 	text-align: center;
 }
@@ -284,6 +283,53 @@
 	height: 190px;
 	justify-content: center;
 	align-items: center;
+	display: block;
+}
+
+.mid-side .calculation .atr-content{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	height: 190px;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.mid-side .calculation .atr-content .atr{
+	width: 150px;
+	text-align: center;
+	height: 30px;
+	color: black;
+	border-color: white;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .atr-content .atrprc{
+	width: 150px;
+	text-align: center;
+	height: 30px;
+	color: white;
+}
+
+.mid-side .calculation .cnv-content{
+	border-style: solid;
+	border-color: white;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	height: 220px;
+	justify-content: center;
+	align-items: center;
+	display: none;
 }
 
 .mid-side .calculation .tmc-content .sthdr{
@@ -295,11 +341,128 @@
 .mid-side .calculation .tmc-content .tmc{
 	border-style: solid;
 	border-color: white;
-	color: white;
+	color: black;
 	font-size: 20px;
 	text-align: center;
 	width: 100px;
 	margin-left: 20px;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .atr-content .atrhdr{
+	color: white;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.mid-side .calculation .cnv-content .p1{
+	padding-bottom: 10px;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+}
+
+.mid-side .calculation .cnv-content .p2{
+	padding-bottom: 10px;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mid-side .calculation .cnv-content .p3{
+	padding-bottom: 10px;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mid-side .calculation .cnv-content .cnvhdr{
+	color: white;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.mid-side .calculation .cnv-content .ndys{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .cnv-content .nhrs{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .cnv-content .spd{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .cnv-content .cip{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .cnv-content .vrp{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: yellowgreen;
+}
+
+.mid-side .calculation .cnv-content .tlp{
+	color: black;
+	height: 25px;
+	width: 75px;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: yellowgreen;
+}
+
+form .type1{
+	color: white;
+	width: 150px;
+	height: 30px;
+	margin-right: 15px;
+	text-align: center;
+}
+
+form .type2{
+	color: white;
+	width: 150px;
+	height: 30px;
+	margin-left: 15px;
+	text-align: center;
+}
+
+form .road{
+	color: white;
+	width: 150px;
+	height: 25px;
+	margin-left: 10px;
+	text-align: center;
+	margin-left: 90px;
+	margin-bottom: 15px;
 }
 
 				/*LEFT SIDE END*/
