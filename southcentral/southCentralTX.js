@@ -276,7 +276,7 @@ function calcATR(){
 		document.getElementById("atrprc").value = fcas + ((daysn-1)*fcasd);
 	}
 	
-}			/*ATR CALCULATION*/
+}			/*ATR CALCULATION END*/
 
 function calcCNV(){
 	var trs = document.getElementById("tr").value;
@@ -315,8 +315,8 @@ function calcCNV(){
 	}
 
 	document.getElementById("cip").value = x;
-	document.getElementById("vrp").value = 35 * day * hr;
-	document.getElementById("tlp").value = x + (35 * day * hr);
+	document.getElementById("vrp").value = (35 * day * hr) / sp;
+	document.getElementById("tlp").value = x + ((35 * day * hr) / sp);
 }
 
 /*RIGHT SIDE FUNCTIONALITY*/
