@@ -86,7 +86,7 @@
 				<h4 class="header">CALCULATE TIER & FUEL SURCHARGE</h4>
 				<div class="dsg">
 					Mileage: <input type="text" name="milage" id="mlg" class="mlg" onchange="ch()">
-					TIER: <input type="text" name="tr" id="tr" class="mlg" disabled/>
+					TIER: <input type="text" name="tr" id="tr" value="1" class="mlg" disabled/>
 					Tech: <input type="text" name="tech" id="tch" class="mlg" value="1">
 				</div>
 				<div class="dsg">
@@ -98,15 +98,53 @@
 			</div>
 			<div class="calculation">
 				<div class="s-type">
-					<button class="svc">TMC</button>
-					<button class="svc">ATR</button>
-					<button class="svc">Cam & Vid Review</button>
+					<button class="svc" onclick="showTMC()">TMC</button>
+					<button class="svc" onclick="showATR()">ATR</button>
+					<button class="svc" onclick="showCNV()">Cam & Vid Review</button>
 				</div>
 				<section class="tmc-content">
 					<h2 class="sthdr">TMC</h2>
 					Number of Hours: <input type="text" name="tmc" class="tmc" id="tmc" onchange="reset()"><br><br>
 					Number of Person: <input type="text" name="tmc" class="tmc" id="psn" onchange="tmc()"><br><br>
 					TMC Price: <input type="text" name="tmc" class="tmc" id="prc" disabled/>
+				</section>
+				<section class="atr-content">
+					<h2 class="atrhdr">ATR</h2>
+					<form>
+						<select name="type" class="type1" id="atr-type1">
+							<option value="Volume">Volume</option>
+							<option value="Class / Speed">Class / Speed</option>
+							<option value="Class & Speed">Speed & Speed</option>
+						</select>
+						<select name="type" class="type2" id="atr-type2">
+							<option value="Normal">Normal</option>
+							<option value="Large">Large</option>
+							<option value="Fwy">Fwy</option>
+						</select>
+					</form><br>
+					Number of Days: <input type="text" name="atr" class="atr" id="ndays" onchange="calcATR()"><br><br>
+					ATR - Price: <input type="text" name="atr" class="atr" id="atrprc" disabled/>
+				</section>
+				<section class="cnv-content">
+					<h3 class="cnvhdr">CAM INSTALLATION & VIDEO REVIEW</h3>
+					<form>
+						<select name="road" class="road" id="road">
+							<option value="Normal">Normal</option>
+							<option value="Freeway">Freeway</option>
+						</select>
+					</form>
+					<div class="p1">
+					Day's Number: <input type="text" name="ndys" class="ndys" id="ndys">
+					# of Hrs: <input type="text" name="nhrs" class="nhrs" id="nhrs" onchange="calcCNV()">
+					</div>
+					<div class="p2">
+					Watch Speed: <input type="text" name="spd" class="spd" id="spd" value="1">
+					CI-Price: <input type="text" name="cip" class="cip" id="cip" disabled/>
+					</div>
+					<div class="p3">
+					VReview-Price: <input type="text" name="vrp" class="vrp" id="vrp" disabled/>
+					Total-Price: <input type="text" name="tlp" class="tlp" id="tlp" disabled/>
+					</div>
 				</section>
 			</div>
 			</div>	

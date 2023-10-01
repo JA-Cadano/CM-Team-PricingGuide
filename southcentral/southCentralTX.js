@@ -13,8 +13,9 @@ let cni3 = document.querySelector(".cni-t3");
 let oth1 = document.querySelector(".oth-t1");
 let oth2 = document.querySelector(".oth-t2");
 let oth3 = document.querySelector(".oth-t3");
-
-
+let ctmc = document.querySelector(".tmc-content");
+let catr = document.querySelector(".atr-content");
+let ccnv = document.querySelector(".cnv-content");
 
 
 /* SHOW TIER BUTTON*/
@@ -72,6 +73,27 @@ function showHide3(){
 	oth3.style.display = "none";
 } /*SHOW TIER BUTTON END*/
 
+
+function showTMC(){
+	ctmc.style.display = "block";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+}
+
+function showATR(){
+	ctmc.style.display = "none";
+	catr.style.display = "block";
+	ccnv.style.display = "none";
+}
+
+function showCNV(){
+	ctmc.style.display = "none";
+	catr.style.display = "none";
+	ccnv.style.display = "block";
+}
+
+	/*FUELSURCHARGE CALCULATION*/
+
 function ch(){
 	var m = Number(document.getElementById("mlg").value);
 	var t = Number(document.getElementById("tch").value);
@@ -97,11 +119,13 @@ function ch(){
 	}else{
 		document.getElementById("finalresult").value = (n1 - x) + 5;
 	}
-}
+}		/*FUELSURCHARGE CALCULATION END*/
 
 function reset(){
 	document.getElementById("psn").value = 0;
 }
+
+		/*TURNING MOVEMENT COUNTS CALCULATION*/
 
 function tmc(){
 	var trs = document.getElementById("tr").value;
@@ -155,7 +179,145 @@ function tmc(){
 	}else if(tmchr > 4){
 		document.getElementById("prc").value = h4 + ((nperson-1)*p4) + ((tmchr -4)*h4h) + ((tmchr - 4)* hph * (nperson-1))
 	}
-} 
+} 			/*TURNING MOVEMENT COUNTS CALCULATION END*/
+
+			/*ATR CALCULATION*/
+function calcATR(){
+	var atype1 = document.getElementById("atr-type1").value;
+	var atype2 = document.getElementById("atr-type2").value;
+	var daysn = document.getElementById("ndays").value;
+	var nvol = 0;
+	var nvold = 0
+	var ncos = 0;
+	var ncosd = 0;
+	var ncas = 0;
+	var ncasd = 0;
+	var lcos = 0;
+	var lcasd = 0;
+	var lcas = 0;
+	var lcasd = 0;
+	var fvol = 0;
+	var fvold = 0;
+	var fcos = 0;
+	var fcosd = 0;
+	var fcas = 0;
+	var fcasd = 0;
+
+	var trs = document.getElementById("tr").value;
+
+	if(trs == 1){
+		nvol = 110;
+		nvold = 65;
+		ncos = 150;
+		ncosd = 80;
+		ncas = 165;
+		ncasd = 90;
+		lcos = 205;
+		lcosd = 105;
+		lcas = 220;
+		lcasd = 115;
+		fvol = 220;
+		fvold = 130;
+		fcos = 300;
+		fcosd = 160;
+		fcas = 330;
+		fcasd = 180;
+	} else if(trs == 2){
+		nvol = 130;
+		nvold = 75;
+		ncos = 170;
+		ncosd = 90;
+		ncas = 185;
+		ncasd = 100;
+		lcos = 235;
+		lcosd = 120;
+		lcas = 250;
+		lcasd = 130;
+		fvol = 260;
+		fvold = 150;
+		fcos = 340;
+		fcosd = 180;
+		fcas = 370;
+		fcasd = 200;
+	} else {
+		nvol = 150;
+		nvold = 85;
+		ncos = 190;
+		ncosd = 100;
+		ncas = 205;
+		ncasd = 110;
+		lcos = 265;
+		lcosd = 135;
+		lcas = 280;
+		lcasd = 145;
+		fvol = 300;
+		fvold = 170;
+		fcos = 380;
+		fcosd = 200;
+		fcas = 410;
+		fcasd = 220;		
+	}
+
+	if(atype1 == "Volume" && atype2 == "Normal"){
+		document.getElementById("atrprc").value = nvol + ((daysn-1)*nvold);
+	}else if(atype1 == "Class / Speed" && atype2 == "Normal"){
+		document.getElementById("atrprc").value = ncos + ((daysn-1)*ncosd);
+	}else if(atype1 == "Class & Speed" && atype2 == "Normal"){
+		document.getElementById("atrprc").value = ncas + ((daysn-1)*ncasd);
+	}else if(atype1 == "Class / Speed" && atype2 == "Large"){
+		document.getElementById("atrprc").value = lcos + ((daysn-1)*lcosd);
+	}else if(atype1 == "Class & Speed" && atype2 == "Large"){
+		document.getElementById("atrprc").value = lcas + ((daysn-1)*lcasd);
+	}else if(atype1 == "Volume" && atype2 == "Fwy"){
+		document.getElementById("atrprc").value = fvol + ((daysn-1)*fvold);
+	}else if(atype1 == "Class / Speed" && atype2 == "Fwy"){
+		document.getElementById("atrprc").value = fcos + ((daysn-1)*fcosd);
+	}else if(atype1 == "Class & Speed" && atype2 == "Fwy"){
+		document.getElementById("atrprc").value = fcas + ((daysn-1)*fcasd);
+	}
+	
+}			/*ATR CALCULATION*/
+
+function calcCNV(){
+	var trs = document.getElementById("tr").value;
+	var rd = document.getElementById("road").value;
+	var day = document.getElementById("ndys").value;
+	var hr = document.getElementById("nhrs").value;
+	var sp = document.getElementById("spd").value;
+	var tp = document.getElementById("tlp").value;
+	var cnv = 0;
+	var cnvd = 0;
+	var cnf	= 0;
+	var cnfd = 0;
+	let x = 0;
+
+	if(trs == 1){
+		cnv = 175;
+		cnvd = 80;
+		cnf = 350;
+		cnfd = 160;
+	} else if(trs == 2){
+		cnv = 205;
+		cnvd = 95;
+		cnf = 410;
+		cnfd = 190;
+	} else {
+		cnv = 255;
+		cnvd = 120;
+		cnf = 510;
+		cnfd = 240;
+	}
+
+	if(rd == "Normal"){
+		x = cnv + ((day - 1)*cnvd);
+	}else{
+		x = cnf + ((day - 1)*cnfd);
+	}
+
+	document.getElementById("cip").value = x;
+	document.getElementById("vrp").value = 35 * day * hr;
+	document.getElementById("tlp").value = x + (35 * day * hr);
+}
 
 /*RIGHT SIDE FUNCTIONALITY*/
 function showATR1(){
