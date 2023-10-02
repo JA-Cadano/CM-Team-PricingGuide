@@ -75,14 +75,14 @@ function showHide3(){
 
 
 function showTMC(){
-	ctmc.style.display = "block";
+	ctmc.style.display = "flex";
 	catr.style.display = "none";
 	ccnv.style.display = "none";
 }
 
 function showATR(){
 	ctmc.style.display = "none";
-	catr.style.display = "block";
+	catr.style.display = "flex";
 	ccnv.style.display = "none";
 }
 

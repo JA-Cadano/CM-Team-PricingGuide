@@ -194,52 +194,57 @@
 .mid-side .tnfsComputation{
 	border-style: solid;
 	border-color: yellowgreen;
-	margin-top: 10px;
-	height: 200px;
+	/*margin-top: 10px;*/
+	height: 280px;
 	width: 450px;
-/*	display: flex;	
+	display: flex;	
 	justify-content: center;
-	align-items: center;*/
+	align-items: center;
+	color: white;
 }
 
 .mid-side .calculation{
 	width: 350px;
 }
 
-.tnfsComputation .header{
+.tnfsComputation .calcContent .header{
+	height: 45px;
 	padding-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 	color: white;
 	text-align: center;
-	
+	border-color: white;
+	border-style: solid;
 }
 
 .tnfsComputation .calcContent{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	border-style: solid;
+	border-color: none;
+	height: 260px;
 }
 
+
 .tnfsComputation .calcContent .dsg1{
-	width: 200px;
-	font-size: 18px;
+	width: 190px;
+	font-size: 20px;
 	color: white;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 10px;
 	border-color: white;
 	margin-bottom: 3px;
-	text-align: right;
+	text-align: left;
 }
 
 .tnfsComputation .calcContent .dsg2{
-	width: 200px;
-	font-size: 18px;
+	width: 50px;
+	font-size: 20px;
 	color: white;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 10px;
 	border-color: white;
-	
 }
 
 .tnfsComputation .dsg2 .mlg{
@@ -249,7 +254,7 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	background-color: yellowgreen;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 3px;
 }
@@ -297,49 +302,72 @@
 .mid-side .calculation .tmc-content{
 	border-style: solid;
 	border-color: white;
-	color: white;
+	color: white; 
 	margin-left: 10px;
 	margin-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 30px;
-	height: 190px;
+	height: 210px;
 	justify-content: center;
-	align-items: center;
-	display: block;
+	align-content: center;
+	display: flex;
+}
+
+.mid-side .calculation .tmc-content .tmctbl{
+	width: 380px;
+	height: 180px;
+	font-size: 20px;
+}
+
+.mid-side .calculation .tmc-content .tmctbl .rs{
+	text-align: right;
+}
+
+.mid-side .calculation .tmc-content .sthdr{
+	color: white;
+	text-align: center;
+	padding-bottom: 5px;
 }
 
 .mid-side .calculation .atr-content{
 	border-style: solid;
-	border-color: white;
+	border-color: red;
 	color: white;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 30px;
-	height: 190px;
+	height: 220px;
 	justify-content: center;
 	align-items: center;
 	display: none;
 }
 
-.mid-side .calculation .atr-content .atr{
-	width: 150px;
-	text-align: center;
-	height: 30px;
-	color: black;
+.mid-side .calculation .atr-content .atrtbl{
+	border-style: solid;
+	border-color: wihte;
+	height: 190px;
+	width: 410px;
+}
+
+.mid-side .calculation .tmc-content .tmc{
+	border-style: solid;
 	border-color: white;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	width: 100px;
+	margin-left: 20px;
 	background-color: yellowgreen;
 	font-size: 18px;
 	font-weight: bold;
 }
 
-.mid-side .calculation .atr-content .atrprc{
-	width: 150px;
+.mid-side .calculation .atr-content .atr{
+	width: 75px;
 	text-align: center;
-	height: 30px;
-	color: white;
+	height: 25px;
+	color: black;
+	border-color: white;
+	background-color: yellowgreen;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content{
@@ -355,25 +383,6 @@
 	justify-content: center;
 	align-items: center;
 	display: none;
-}
-
-.mid-side .calculation .tmc-content .sthdr{
-	color: white;
-	text-align: center;
-	padding-bottom: 5px;
-}
-
-.mid-side .calculation .tmc-content .tmc{
-	border-style: solid;
-	border-color: white;
-	color: black;
-	font-size: 20px;
-	text-align: center;
-	width: 100px;
-	margin-left: 20px;
-	background-color: yellowgreen;
-	font-size: 18px;
-	font-weight: bold;
 }
 
 .mid-side .calculation .atr-content .atrhdr{
