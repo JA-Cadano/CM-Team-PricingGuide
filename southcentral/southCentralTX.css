@@ -67,8 +67,8 @@
 					/*LEFT PART*/
 .fll .lft-side{
 	border-style: solid;
-	border-color: none;
-	width: 30%;
+	border-color: red;
+	width: 20%;
 	height: 1000px;
 	display: flex;
 	justify-content: center;
@@ -167,10 +167,12 @@
 	padding-right: 10px;
 }
 
+			/*RIGHT SIDE MARKER*/
+
 .fll .ryt-side{
 	border-style: solid;
-	border-color: none;
-	width: 40%;
+	border-color: red;
+	width: 50%;
 	height: 1000px;
 	display: flex;
 	justify-content: center;
@@ -181,7 +183,7 @@
 
 .fll .mid-side{
 	border-style: solid;
-	border-color: none;
+	border-color: red;
 	width: 30%;
 	height: 1000px;
 	display: flex;
@@ -193,11 +195,11 @@
 	border-style: solid;
 	border-color: yellowgreen;
 	margin-top: 10px;
-	height: 130px;
+	height: 200px;
 	width: 450px;
-	display: flex;	
+/*	display: flex;	
 	justify-content: center;
-	align-items: center;
+	align-items: center;*/
 }
 
 .mid-side .calculation{
@@ -205,30 +207,51 @@
 }
 
 .tnfsComputation .header{
+	padding-top: 10px;
 	color: white;
 	text-align: center;
 	
 }
 
-.tnfsComputation .dsg{
-	font-size: 18px;
-	color: white;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
+.tnfsComputation .calcContent{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.tnfsComputation .dsg .mlg{
+.tnfsComputation .calcContent .dsg1{
+	width: 200px;
+	font-size: 18px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-color: white;
+	margin-bottom: 3px;
+	text-align: right;
+}
+
+.tnfsComputation .calcContent .dsg2{
+	width: 200px;
+	font-size: 18px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-color: white;
+	
+}
+
+.tnfsComputation .dsg2 .mlg{
 	color: black;
 	text-align: center;
 	width: 75px;
 	margin-left: 10px;
 	margin-right: 10px;
 	background-color: yellowgreen;
-	font-size: 18px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 3px;
 }
 
 .mid-side .calculation{
@@ -308,6 +331,8 @@
 	color: black;
 	border-color: white;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .atr-content .atrprc{
@@ -347,6 +372,8 @@
 	width: 100px;
 	margin-left: 20px;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .atr-content .atrhdr{
@@ -393,8 +420,9 @@
 	height: 25px;
 	width: 75px;
 	text-align: center;
-	padding-bottom: 10px;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content .nhrs{
@@ -403,6 +431,8 @@
 	width: 75px;
 	text-align: center;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content .spd{
@@ -411,6 +441,8 @@
 	width: 75px;
 	text-align: center;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content .cip{
@@ -419,6 +451,8 @@
 	width: 75px;
 	text-align: center;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content .vrp{
@@ -428,6 +462,8 @@
 	text-align: center;
 	padding-bottom: 10px;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .mid-side .calculation .cnv-content .tlp{
@@ -435,8 +471,9 @@
 	height: 25px;
 	width: 75px;
 	text-align: center;
-	padding-bottom: 10px;
 	background-color: yellowgreen;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 form .type1{
@@ -466,7 +503,7 @@ form .road{
 }
 
 				/*LEFT SIDE END*/
-						/*LEFT SIDE FUNCTIONALITY*/
+						/*RIGHT SIDE FUNCTIONALITY*/
 
 
 
@@ -517,7 +554,7 @@ form .road{
 .ryt-side .oth-t3{
 	display: none;
 }
-					/*LEFT SIDE FUNCTIONALITY END*/
+					/*RIGHT SIDE FUNCTIONALITY END*/
 
 .svc-type{
 	border-style: solid;

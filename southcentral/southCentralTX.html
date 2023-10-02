@@ -83,15 +83,23 @@
 			<div>				  <!--MIDDLE PART-->
 			<div class="tnfsComputation">
 				<div>
-				<h4 class="header">CALCULATE TIER & FUEL SURCHARGE</h4>
-				<div class="dsg">
-					Mileage: <input type="text" name="milage" id="mlg" class="mlg" onchange="ch()">
-					TIER: <input type="text" name="tr" id="tr" value="1" class="mlg" disabled/>
-					Tech: <input type="text" name="tech" id="tch" class="mlg" value="1">
+					<h4 class="header">CALCULATE TIER & FUEL SURCHARGE</h4>
 				</div>
-				<div class="dsg">
-					Trip: <input type="text" name="roundtrip" id="trp" class="mlg" value="2">
-					F Surcharge: <input type="text" name="fuel" class="mlg" id="fs" disabled/>
+				<div class="calcContent">
+				<div class="dsg1">
+					Mileage:<br>
+					TIER:<br>
+					Tech: <br>
+					Trip:<br>
+					Fuel <br>
+					Surcharge:	<br>			
+				</div>
+				<div class="dsg2">
+					<input type="text" name="milage" id="mlg" class="mlg" onchange="ch()">
+					<input type="text" name="tr" id="tr" value="1" class="mlg" disabled/>
+					<input type="text" name="tech" id="tch" class="mlg" value="1" onchange="ch()">
+					<input type="text" name="roundtrip" id="trp" class="mlg" value="2" onchange="ch()">
+					<input type="text" name="fuel" class="mlg" id="fs" disabled/> 
 					<input type="text" name="finalresult" id="finalresult" class="mlg" disabled/>
 				</div>
 				</div>
@@ -103,7 +111,7 @@
 					<button class="svc" onclick="showCNV()">Cam & Vid Review</button>
 				</div>
 				<section class="tmc-content">
-					<h2 class="sthdr">TMC</h2>
+					<div><h2 class="sthdr">TMC</h2></div>
 					Number of Hours: <input type="text" name="tmc" class="tmc" id="tmc" onchange="reset()"><br><br>
 					Number of Person: <input type="text" name="tmc" class="tmc" id="psn" onchange="tmc()"><br><br>
 					TMC Price: <input type="text" name="tmc" class="tmc" id="prc" disabled/>
@@ -138,7 +146,7 @@
 					# of Hrs: <input type="text" name="nhrs" class="nhrs" id="nhrs" onchange="calcCNV()">
 					</div>
 					<div class="p2">
-					Watch Speed: <input type="text" name="spd" class="spd" id="spd" value="1">
+					Watch Speed: <input type="text" name="spd" class="spd" id="spd" value="1" onchange="calcCNV()">
 					CI-Price: <input type="text" name="cip" class="cip" id="cip" disabled/>
 					</div>
 					<div class="p3">
