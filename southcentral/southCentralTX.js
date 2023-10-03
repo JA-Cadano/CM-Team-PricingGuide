@@ -17,6 +17,7 @@ let ctmc = document.querySelector(".tmc-content");
 let catr = document.querySelector(".atr-content");
 let ccnv = document.querySelector(".cnv-content");
 
+
 /* SHOW TIER BUTTON*/
 function showHide1(){
 	showTier1.style.display = "block";
@@ -300,11 +301,13 @@ function showCNV(){
 
 	/*FUELSURCHARGE CALCULATION*/
 
+
 function ch(){
 	var m = Number(document.getElementById("mlg").value);
 	var t = Number(document.getElementById("tch").value);
 	var tr = Number(document.getElementById("trp").value);
 	var mr = document.getElementById("marker").value;
+	
 	var lvl = 0;
 
 	if(m < 40){
@@ -341,6 +344,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
 	}else if(lvl == 1 && mr == "ATR"){
 		atr1.style.display = "block";
 		atr2.style.display = "none";
@@ -354,6 +358,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
 	}else if(lvl == 1 && mr == "CNV"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -367,6 +372,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("CNV").value = "TMC";
 	}else if(lvl == 2 && mr == "TMC"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -380,6 +386,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
 	}else if(lvl == 2 && mr == "ATR"){
 		atr1.style.display = "none";
 		atr2.style.display = "block";
@@ -393,6 +400,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
 	}else if(lvl == 2 && mr == "CNV"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -406,6 +414,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "CNV";
 	}else if(lvl == 3 && mr == "TMC"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -419,6 +428,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
 	}else if(lvl == 3 && mr == "ATR"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -432,6 +442,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
 	}else if(lvl == 3 && mr == "CNV"){
 		atr1.style.display = "none";
 		atr2.style.display = "none";
@@ -445,6 +456,7 @@ function ch(){
 		oth1.style.display = "none";
 		oth2.style.display = "none";
 		oth3.style.display = "none";
+		document.getElementById("marker").value = "CNV";
 	}
 
 	var n1 = m * t * 2 * tr * 0.13;
@@ -471,6 +483,7 @@ function ch(){
 	document.getElementById("cip").value = "";
 	document.getElementById("vrp").value = "";
 	document.getElementById("tlp").value = "";
+
 }		
 
 /*FUELSURCHARGE CALCULATION END*/
