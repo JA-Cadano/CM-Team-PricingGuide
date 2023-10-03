@@ -37,6 +37,19 @@ function showHide1(){
 	document.getElementById("mlg").value = "";
 	document.getElementById("tr").value = 1;
 	document.getElementById("marker").value = "TMC";
+	document.getElementById("fs").value = "";
+	document.getElementById("finalresult").value = "";
+	document.getElementById("tmc").value = "";
+	document.getElementById("psn").value = "";
+	document.getElementById("prc").value = "";
+	document.getElementById("ndays").value = "";
+	document.getElementById("atrprc").value = "";
+	document.getElementById("ndys").value = "";
+	document.getElementById("nhrs").value = "";
+	document.getElementById("spd").value = "1";
+	document.getElementById("cip").value = "";
+	document.getElementById("vrp").value = "";
+	document.getElementById("tlp").value = "";
 }
 
 function showHide2(){
@@ -58,6 +71,19 @@ function showHide2(){
 	document.getElementById("mlg").value = "";
 	document.getElementById("tr").value = 2;
 	document.getElementById("marker").value = "TMC";
+	document.getElementById("fs").value = "";
+	document.getElementById("finalresult").value = "";
+	document.getElementById("tmc").value = "";
+	document.getElementById("psn").value = "";
+	document.getElementById("prc").value = "";
+	document.getElementById("ndays").value = "";
+	document.getElementById("atrprc").value = "";
+	document.getElementById("ndys").value = "";
+	document.getElementById("nhrs").value = "";
+	document.getElementById("spd").value = "1";
+	document.getElementById("cip").value = "";
+	document.getElementById("vrp").value = "";
+	document.getElementById("tlp").value = "";
 }
 
 function showHide3(){
@@ -79,6 +105,19 @@ function showHide3(){
 	document.getElementById("mlg").value = "";
 	document.getElementById("tr").value = 3;
 	document.getElementById("marker").value = "TMC";
+	document.getElementById("fs").value = "";
+	document.getElementById("finalresult").value = "";
+	document.getElementById("tmc").value = "";
+	document.getElementById("psn").value = "";
+	document.getElementById("prc").value = "";
+	document.getElementById("ndays").value = "";
+	document.getElementById("atrprc").value = "";
+	document.getElementById("ndys").value = "";
+	document.getElementById("nhrs").value = "";
+	document.getElementById("spd").value = "1";
+	document.getElementById("cip").value = "";
+	document.getElementById("vrp").value = "";
+	document.getElementById("tlp").value = "";
 } /*SHOW TIER BUTTON END*/
 
 
@@ -420,7 +459,21 @@ function ch(){
 	}else{
 		document.getElementById("finalresult").value = (n1 - x) + 5;
 	}
-}		/*FUELSURCHARGE CALCULATION END*/
+
+	document.getElementById("tmc").value = "";
+	document.getElementById("psn").value = "";
+	document.getElementById("prc").value = "";
+	document.getElementById("ndays").value = "";
+	document.getElementById("atrprc").value = "";
+	document.getElementById("ndys").value = "";
+	document.getElementById("nhrs").value = "";
+	document.getElementById("spd").value = "1";
+	document.getElementById("cip").value = "";
+	document.getElementById("vrp").value = "";
+	document.getElementById("tlp").value = "";
+}		
+
+/*FUELSURCHARGE CALCULATION END*/
 
 function reset(){
 	document.getElementById("psn").value = 0;
@@ -430,6 +483,7 @@ function reset(){
 
 function tmc(){
 	var trs = document.getElementById("tr").value;
+	var x = document.getElementById("numd").value;
 	
 	var h2 = 0;
 	var p2 = 0;
@@ -472,13 +526,13 @@ function tmc(){
 	var nperson = document.getElementById("psn").value;
 	var	tmchr = document.getElementById("tmc").value;
 	if(tmchr == 2){
-		document.getElementById("prc").value = h2 + ((nperson-1)*p2);
+		document.getElementById("prc").value = (h2 + ((nperson-1)*p2)) * x;
 	} else if(tmchr == 3){
-		document.getElementById("prc").value = h3 + ((nperson-1)*p3);
+		document.getElementById("prc").value = (h3 + ((nperson-1)*p3)) * x;
 	} else if(tmchr == 4){
-		document.getElementById("prc").value = h4 + ((nperson-1)*p4);
+		document.getElementById("prc").value = (h4 + ((nperson-1)*p4)) * x;
 	}else if(tmchr > 4){
-		document.getElementById("prc").value = h4 + ((nperson-1)*p4) + ((tmchr -4)*h4h) + ((tmchr - 4)* hph * (nperson-1))
+		document.getElementById("prc").value = (h4 + ((nperson-1)*p4) + ((tmchr -4)*h4h) + ((tmchr - 4)* hph * (nperson-1))) * x;
 	}
 } 			/*TURNING MOVEMENT COUNTS CALCULATION END*/
 
@@ -575,6 +629,8 @@ function calcATR(){
 		document.getElementById("atrprc").value = fcos + ((daysn-1)*fcosd);
 	}else if(atype1 == "Class & Speed" && atype2 == "Fwy"){
 		document.getElementById("atrprc").value = fcas + ((daysn-1)*fcasd);
+	}else if(atype1 == "Volume" && atype2 == "Large"){
+		document.getElementById("atrprc").value = 0;
 	}
 	
 }			/*ATR CALCULATION END*/
