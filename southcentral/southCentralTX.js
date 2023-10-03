@@ -17,7 +17,6 @@ let ctmc = document.querySelector(".tmc-content");
 let catr = document.querySelector(".atr-content");
 let ccnv = document.querySelector(".cnv-content");
 
-
 /* SHOW TIER BUTTON*/
 function showHide1(){
 	showTier1.style.display = "block";
@@ -35,6 +34,9 @@ function showHide1(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	document.getElementById("mlg").value = "";
+	document.getElementById("tr").value = 1;
+	document.getElementById("marker").value = "TMC";
 }
 
 function showHide2(){
@@ -53,6 +55,9 @@ function showHide2(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	document.getElementById("mlg").value = "";
+	document.getElementById("tr").value = 2;
+	document.getElementById("marker").value = "TMC";
 }
 
 function showHide3(){
@@ -71,25 +76,187 @@ function showHide3(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	document.getElementById("mlg").value = "";
+	document.getElementById("tr").value = 3;
+	document.getElementById("marker").value = "TMC";
 } /*SHOW TIER BUTTON END*/
 
 
 function showTMC(){
+	var x = document.getElementById("tr").value;
 	ctmc.style.display = "flex";
 	catr.style.display = "none";
 	ccnv.style.display = "none";
+	if(x == 1){
+		showTier1.style.display = "block";
+		showTier2.style.display = "none";
+		showTier3.style.display = "none";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "block";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
+	} else if (x == 2){
+		showTier1.style.display = "none";
+		showTier2.style.display = "block";
+		showTier3.style.display = "none";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "block";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
+	} else {
+		showTier1.style.display = "none";
+		showTier2.style.display = "none";
+		showTier3.style.display = "block";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "block";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "TMC";
+	}
 }
 
 function showATR(){
+	var x = document.getElementById("tr").value;
 	ctmc.style.display = "none";
 	catr.style.display = "flex";
 	ccnv.style.display = "none";
+	if(x == 1){
+		showTier1.style.display = "block";
+		showTier2.style.display = "none";
+		showTier3.style.display = "none";
+		atr1.style.display = "block";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
+	} else if (x == 2){
+		showTier1.style.display = "none";
+		showTier2.style.display = "block";
+		showTier3.style.display = "none";
+		atr1.style.display = "none";
+		atr2.style.display = "block";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
+	} else {
+		showTier1.style.display = "none";
+		showTier2.style.display = "none";
+		showTier3.style.display = "block";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "block";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "ATR";
+	}
 }
 
 function showCNV(){
+	var x = document.getElementById("tr").value;
 	ctmc.style.display = "none";
 	catr.style.display = "none";
 	ccnv.style.display = "block";
+	if(x == 1){
+		showTier1.style.display = "block";
+		showTier2.style.display = "none";
+		showTier3.style.display = "none";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "block";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "CNV";
+	} else if (x == 2){
+		showTier1.style.display = "none";
+		showTier2.style.display = "block";
+		showTier3.style.display = "none";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "block";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "CNV";
+	} else {
+		showTier1.style.display = "none";
+		showTier2.style.display = "none";
+		showTier3.style.display = "block";
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "block";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+		document.getElementById("marker").value = "CNV";
+	}
 }
 
 	/*FUELSURCHARGE CALCULATION*/
@@ -98,13 +265,147 @@ function ch(){
 	var m = Number(document.getElementById("mlg").value);
 	var t = Number(document.getElementById("tch").value);
 	var tr = Number(document.getElementById("trp").value);
+	var mr = document.getElementById("marker").value;
+	var lvl = 0;
 
 	if(m < 40){
+		lvl = 1;
 		document.getElementById("tr").value = "1";
+		showTier1.style.display = "block";
+		showTier2.style.display = "none";
+		showTier3.style.display = "none";
 	}else if(m < 70){
+		lvl = 2;
 		document.getElementById("tr").value = "2";
+		showTier1.style.display = "none";
+		showTier2.style.display = "block";
+		showTier3.style.display = "none";
 	}else{
+		lvl = 3;
 		document.getElementById("tr").value = "3";
+		showTier1.style.display = "none";
+		showTier2.style.display = "none";
+		showTier3.style.display = "block";
+	}
+
+
+	if(lvl == 1 && mr == "TMC"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "block";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 1 && mr == "ATR"){
+		atr1.style.display = "block";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 1 && mr == "CNV"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "block";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 2 && mr == "TMC"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "block";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 2 && mr == "ATR"){
+		atr1.style.display = "none";
+		atr2.style.display = "block";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 2 && mr == "CNV"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "block";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 3 && mr == "TMC"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "block";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 3 && mr == "ATR"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "block";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "none";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
+	}else if(lvl == 3 && mr == "CNV"){
+		atr1.style.display = "none";
+		atr2.style.display = "none";
+		atr3.style.display = "none";
+		tmc1.style.display = "none";
+		tmc2.style.display = "none";
+		tmc3.style.display = "none";
+		cni1.style.display = "none";
+		cni2.style.display = "none";
+		cni3.style.display = "block";
+		oth1.style.display = "none";
+		oth2.style.display = "none";
+		oth3.style.display = "none";
 	}
 
 	var n1 = m * t * 2 * tr * 0.13;
@@ -320,6 +621,7 @@ function calcCNV(){
 }
 
 /*RIGHT SIDE FUNCTIONALITY*/
+
 function showATR1(){
 	atr1.style.display = "block";
 	atr2.style.display = "none";
@@ -333,6 +635,10 @@ function showATR1(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "flex";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "ATR";
 }
 
 function showATR2(){
@@ -348,6 +654,10 @@ function showATR2(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "flex";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "ATR";
 }
 
 function showATR3(){
@@ -363,6 +673,10 @@ function showATR3(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "flex";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "ATR";
 }
 
 function showTMC1(){
@@ -378,6 +692,10 @@ function showTMC1(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "TMC";
 }
 
 function showTMC2(){
@@ -393,6 +711,10 @@ function showTMC2(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "TMC";
 }
 
 function showTMC3(){
@@ -408,6 +730,10 @@ function showTMC3(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "TMC";
 }
 
 function showCNI1(){
@@ -423,6 +749,10 @@ function showCNI1(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "none";
+	ccnv.style.display = "block";
+	document.getElementById("marker").value = "CNV";
 }
 
 function showCNI2(){
@@ -438,6 +768,10 @@ function showCNI2(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "none";
+	ccnv.style.display = "block";
+	document.getElementById("marker").value = "CNV";
 }
 
 function showCNI3(){
@@ -453,6 +787,10 @@ function showCNI3(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "none";
+	catr.style.display = "none";
+	ccnv.style.display = "block";
+	document.getElementById("marker").value = "CNV";
 }
 
 function showOTH1(){
@@ -468,6 +806,10 @@ function showOTH1(){
 	oth1.style.display = "block";
 	oth2.style.display = "none";
 	oth3.style.display = "none";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "OTH";
 }
 
 function showOTH2(){
@@ -483,6 +825,10 @@ function showOTH2(){
 	oth1.style.display = "none";
 	oth2.style.display = "block";
 	oth3.style.display = "none";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "OTH";
 }
 
 function showOTH3(){
@@ -498,5 +844,9 @@ function showOTH3(){
 	oth1.style.display = "none";
 	oth2.style.display = "none";
 	oth3.style.display = "block";
+	ctmc.style.display = "flex";
+	catr.style.display = "none";
+	ccnv.style.display = "none";
+	document.getElementById("marker").value = "OTH";
 }
 /*RIGHT SIDE FUNCTIONALITY END*/

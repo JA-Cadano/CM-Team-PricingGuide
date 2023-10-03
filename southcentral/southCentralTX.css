@@ -331,7 +331,7 @@
 
 .mid-side .calculation .atr-content{
 	border-style: solid;
-	border-color: red;
+	border-color: none;
 	color: white;
 	height: 220px;
 	justify-content: center;
@@ -469,7 +469,6 @@
 	height: 25px;
 	width: 75px;
 	text-align: center;
-	padding-bottom: 10px;
 	background-color: yellowgreen;
 	font-size: 18px;
 	font-weight: bold;
@@ -515,6 +514,9 @@ form .road{
 						/*RIGHT SIDE FUNCTIONALITY*/
 
 
+.ryt-side .marker{
+	display: none;
+}
 
 .ryt-side .atr-t1{
 	display: none;
