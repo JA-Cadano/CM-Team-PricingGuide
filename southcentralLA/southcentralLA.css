@@ -35,6 +35,10 @@
 
 /*------------------HEADER TOP END---------------------------*/
 
+.stype{
+	visibility: hidden;
+}
+
 /*------------------HEADER BOTTON----------------------------*/
 .bottomheader{
 	border-style: solid;
@@ -329,7 +333,7 @@
 }
 
 .leftside-body .lower-left .tmc-input{
-	display: none; /*flex*/
+	display: flex; /*flex*/
 	justify-content: space-evenly;
 	align-content: center;
 	border-style: solid;
@@ -394,7 +398,7 @@
 }
 
 .leftside-body .lower-left .cnv-input{
-	display: block; /*block*/
+	display: none; /*block*/
 	justify-content: center;
 	align-content: center;
 	border-style: solid;
@@ -467,7 +471,7 @@
 }
 
 .rightside-body .rsbody-content .tmc1{
-	display: none; /*flex*/
+	display: flex; /*flex*/
 	justify-content: center;
 	align-content: center;
 }
@@ -521,7 +525,7 @@
 }
 
 .rightside-body .rsbody-content .oth{
-	display: flex; /*flex*/
+	display: none; /*flex*/
 	justify-content: center;
 	align-content: center;
 }
