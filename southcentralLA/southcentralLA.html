@@ -86,14 +86,20 @@
 		<!---------------UPPER-LEFT------------>	
 		<div class="upper-left">
 			<div class="upperl-content1">
-				<button class="btn">TIER-1</button>
-				<button class="btn">TIER-2</button>
-				<button class="btn">TIER-3</button>
+				<button class="btn" onclick="setTier1()">TIER-1</button>
+				<button class="btn" onclick="setTier2()">TIER-2</button>
+				<button class="btn" onclick="setTier3()">TIER-3</button>
 			</div>
 
 			<div class="upperl-content2">
 				<div class="hdr1" id="hdr1">
-					<h1>TIER-1</h1>
+					<h1>TIER 1</h1>
+				</div>
+				<div class="hdr2" id="hdr2">
+					<h1>TIER 2</h1>
+				</div>
+				<div class="hdr3" id="hdr3">
+					<h1>TIER 3</h1>
 				</div>
 				<button class="content2" id="tmc1" type="button">
 					<h3>TURNING MOVEMENT COUNT <br> FIELD TECH</h3>
@@ -101,11 +107,11 @@
 				<button class="content2" id="atr1" type="button">
 					<h3>AUTOMATED TRAFFIC RECORDER</h3>
 				</button>
-				<button class="content2" id="atr1" type="button">
-					<h3>CAM INSTALL & VIDEO REVIEW <br>RADAR (SPEED STUDY)</h3>
+				<button class="content2" id="cnv1" type="button">
+					<h3>CAM INSTALL & VIDEO REVIEW <br>RADAR (SPEED STUDY)- GPS & WAVETRONIX</h3>
 				</button>
-				<button class="content2" id="atr1" type="button">
-					<h3>BLUETOOTH & DATABASE,<br> GPS-TRT & WAVE TRONICS</h3>
+				<button class="content2" id="oth1" type="button">
+					<h3>BLUETOOTH & DATABASE</h3>
 				</button>
 			</div>
 		</div>
@@ -121,7 +127,7 @@
 							<td><h3>Milage</h3></td>
 							<td>
 								<form>
-									<input type="text" name="milage" id="milage"></input>
+									<input type="text" name="milage" id="milage" onchange="getTier()"></input>
 								</form>
 							</td>
 						</tr>
@@ -141,7 +147,7 @@
 							<td><h3>Tier</h3></td>
 							<td>
 								<form>
-									<input type="text" name="tier" id="tier" disabled/></input>
+									<input type="text" value="1" name="tier" id="tier" disabled/></input>
 								</form>
 							</td>
 						</tr>
@@ -175,9 +181,9 @@
 			</div>
 			<div class="lowerl-content3">
 				<div class="hdr">
-					<button>TMC/TECH</button>
-					<button>ATR</button>
-					<button>C&V</button>
+					<button onclick="showTMC()" type="button">TMC/TECH</button>
+					<button onclick="showATR()">ATR</button>
+					<button onclick="showCNV()">C&V</button>
 				</div>
 				<div class="tmc-input">
 					<table>
@@ -303,7 +309,1140 @@
 
 	<!---------------RIGHT-SIDE-BODY------------>
 	<div class="rightside-body">
-
+		<div class="rsbody-content">
+			<!----------------TMC-1---------------->
+			<table class="tmc1">
+				<tr>
+					<th colspan="4"><h2>TMC - TIER 1</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 150</td>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour (Additional Person</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 95</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour</td>
+					<td>< 40</td>
+					<td>$ 215</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour (Additional Person</td>
+					<td>< 40</td>
+					<td>$ 135</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 275</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Hour)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 65</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 170</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person, Additional Hour)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 40</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>2 Hour (2-Person Calculated Rate)</td>
+					<td>< 40</td>
+					<td>$ 245</td>
+				</tr>
+				<tr>
+					<td class="tdcl">3</td>
+					<td class="tdcl">3 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 350</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>4 Hour (2-Person Calculated Rate)</td>
+					<td>< 40</td>
+					<td>$ 445</td>
+				</tr>
+				<tr>
+					<td class="tdcl">6</td>
+					<td class="tdcl">6 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 655</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>FIELD TECH</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Field Rate (Additional Hour After 4 hours.<br>
+					First 4 hours are TMC Rate)</td>
+					<td>< 40</td>
+					<td>$ 80</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>ADD-ON</h2></th>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Add Intersection Sketch</td>
+					<td>NA</td>
+					<td>$ 5</td>
+				</tr>
+				<tr>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">Add Signal Phasing, Signal Timing, MPH</td>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">$ 5</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Hard Drive with Shipping Fee</td>
+					<td>NA</td>
+					<td>$ 100</td>
+				</tr>
+			</table>
+			<!----------------TMC-1--END----------->
+			<!----------------TMC-2---------------->
+			<table class="tmc2">
+				<tr>
+					<th colspan="4"><h2>TMC - TIER 2</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 170</td>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour (Additional Person</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 110</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour</td>
+					<td>40 - 69</td>
+					<td>$ 235</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour (Additional Person</td>
+					<td>40 - 69</td>
+					<td>$ 145</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 295</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Hour)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 70</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 190</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person, Additional Hour)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 45</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>2 Hour (2-Person Calculated Rate)</td>
+					<td>40 - 69</td>
+					<td>$ 280</td>
+				</tr>
+				<tr>
+					<td class="tdcl">3</td>
+					<td class="tdcl">3 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 380</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>4 Hour (2-Person Calculated Rate)</td>
+					<td>40 - 69</td>
+					<td>$ 485</td>
+				</tr>
+				<tr>
+					<td class="tdcl">6</td>
+					<td class="tdcl">6 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 715</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>FIELD TECH</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Field Rate (Additional Hour After 4 hours.<br>
+					First 4 hours are TMC Rate)</td>
+					<td>40 - 69</td>
+					<td>$ 85</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>ADD-ON</h2></th>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Add Intersection Sketch</td>
+					<td>NA</td>
+					<td>$ 5</td>
+				</tr>
+				<tr>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">Add Signal Phasing, Signal Timing, MPH</td>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">$ 5</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Hard Drive with Shipping Fee</td>
+					<td>NA</td>
+					<td>$ 100</td>
+				</tr>
+			</table>
+			<!----------------TMC-2--END----------->
+			<!----------------TMC-3---------------->
+			<table class="tmc3">
+				<tr>
+					<th colspan="4"><h2>TMC - TIER 3</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 200</td>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">2 Hour (Additional Person</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour</td>
+					<td>70 - 119</td>
+					<td>$ 270</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3 Hour (Additional Person</td>
+					<td>70 - 119</td>
+					<td>$ 165</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 330</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Hour)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 80</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 215</td>
+				</tr>
+				<tr>
+					<td class="tdcl">4</td>
+					<td class="tdcl">4 Hour (Additional Person, Additional Hour)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 50</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>2 Hour (2-Person Calculated Rate)</td>
+					<td>70 - 119</td>
+					<td>$ 320</td>
+				</tr>
+				<tr>
+					<td class="tdcl">3</td>
+					<td class="tdcl">3 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 435</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>4 Hour (2-Person Calculated Rate)</td>
+					<td>70 - 119</td>
+					<td>$ 545</td>
+				</tr>
+				<tr>
+					<td class="tdcl">6</td>
+					<td class="tdcl">6 Hour (2-Person Calculated Rate)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 805</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>FIELD TECH</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Field Rate (Additional Hour After 4 hours.<br>
+					First 4 hours are TMC Rate)</td>
+					<td>70 - 119</td>
+					<td>$ 90</td>
+				</tr>
+				<!------------------------------------->
+				<tr>
+					<th colspan="4"><h2>ADD-ON</h2></th>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Add Intersection Sketch</td>
+					<td>NA</td>
+					<td>$ 5</td>
+				</tr>
+				<tr>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">Add Signal Phasing, Signal Timing, MPH</td>
+					<td class="tdcl">NA</td>
+					<td class="tdcl">$ 5</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Hard Drive with Shipping Fee</td>
+					<td>NA</td>
+					<td>$ 100</td>
+				</tr>
+			</table>
+			<!----------------TMC-3--END----------->
+			<!----------------ATR-1---------------->
+			<table class="atr1">
+				<tr>
+					<th colspan="4"><h2>ATR - TIER 1</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>NORMAL</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal, Additional Day)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 70</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal)</td>
+					<td>< 40</td>
+					<td>$ 160</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal, Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 85</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 175</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal, Additional Day)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 95</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>LARGE</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large)</td>
+					<td>< 40</td>
+					<td>$ 220</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large, Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 115</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td class="tdcl">Class AND Speed (Large)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 235</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Large, Additional Day)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 125</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>FREEWAY</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy)</td>
+					<td>< 40</td>
+					<td>$ 240</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy, Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 140</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 320</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy, Additional Day)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 170</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy)</td>
+					<td>< 40</td>
+					<td>$ 350</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy, Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 190</td>
+				</tr>
+			</table>
+			<!----------------ATR-1--END----------->
+			<!----------------ATR-2---------------->
+			<table class="atr2">
+				<tr>
+					<th colspan="4"><h2>ATR - TIER 2</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>NORMAL</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 140</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal, Additional Day)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 80</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal)</td>
+					<td>40 - 69</td>
+					<td>$ 180</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal, Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 95</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 195</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal, Additional Day)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 105</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>LARGE</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large)</td>
+					<td>40 - 69</td>
+					<td>$ 250</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large, Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 130</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td class="tdcl">Class AND Speed (Large)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 265</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Large, Additional Day)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 140</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>FREEWAY</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy)</td>
+					<td>40 - 69</td>
+					<td>$ 280</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy, Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 160</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 360</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy, Additional Day)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 190</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy)</td>
+					<td>40 - 69</td>
+					<td>$ 390</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy, Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 210</td>
+				</tr>
+			</table>
+			<!----------------ATR-2--END----------->
+			<!----------------ATR-3---------------->
+			<table class="atr3">
+				<tr>
+					<th colspan="4"><h2>ATR - TIER 3</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>NORMAL</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 160</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Volume (Normal, Additional Day)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 90</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal)</td>
+					<td>70 - 119</td>
+					<td>$ 200</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Normal, Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 105</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 215</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Normal, Additional Day)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 115</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>LARGE</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large)</td>
+					<td>70 - 119</td>
+					<td>$ 280</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class OR Speed (Large, Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 145</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td class="tdcl">Class AND Speed (Large)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 295</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class AND Speed (Large, Additional Day)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 155</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>FREEWAY</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy)</td>
+					<td>70 - 119</td>
+					<td>$ 320</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Volume (Fwy, Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 180</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 400</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Class OR Speed (Fwy, Additional Day)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 210</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy)</td>
+					<td>70 - 119</td>
+					<td>$ 430</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Class AND Speed (Fwy, Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 230</td>
+				</tr>
+			</table>
+			<!----------------ATR-3--END----------->
+			<!----------------CNV-1---------------->
+			<table class="cnv1">
+				<tr>
+					<th colspan="4"><h2>TIER 1</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>VIDEO REVIEW</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing)</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing) - Non NDS</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>CAMERA INSTALLATION</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 175</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation (Additional Day)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 80</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours)</td>
+					<td>< 40</td>
+					<td>$ 350</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours) (Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 160</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>RADAR (SPEED STUDY)</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">Radar Low Volume (2 Hours)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 160</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">Radar Low Volume (Additional Hour)</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 80</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar Average Volume (1 Hour)</td>
+					<td>< 40</td>
+					<td>$ 80</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar High Volume (<=1 Hour)</td>
+					<td>< 40</td>
+					<td>$ 65</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>GPS</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Travel Time Hour</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Inventory Hour</td>
+					<td class="tdcl">< 40</td>
+					<td class="tdcl">$ 100</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>WAVETRONIX</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation</td>
+					<td>< 40</td>
+					<td>$ 350</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation (Additional Day)</td>
+					<td>< 40</td>
+					<td>$ 200</td>
+				</tr>
+			</table>
+			<!----------------CNV-1--END----------->
+			<!----------------CNV-2---------------->
+			<table class="cnv2">
+				<tr>
+					<th colspan="4"><h2>TIER 2</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>VIDEO REVIEW</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing)</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing) - Non NDS</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>CAMERA INSTALLATION</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 205</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation (Additional Day)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 95</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours)</td>
+					<td>40 - 69</td>
+					<td>$ 410</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours) (Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 190</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>RADAR (SPEED STUDY)</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">Radar Low Volume (2 Hours)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 180</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">Radar Low Volume (Additional Hour)</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 90</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar Average Volume (1 Hour)</td>
+					<td>40 - 69</td>
+					<td>$ 90</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar High Volume (<=1 Hour)</td>
+					<td>40 - 69</td>
+					<td>$ 75</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>GPS</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Travel Time Hour</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Inventory Hour</td>
+					<td class="tdcl">40 - 69</td>
+					<td class="tdcl">$ 100</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>WAVETRONIX</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation</td>
+					<td>40 - 69</td>
+					<td>$ 400</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation (Additional Day)</td>
+					<td>40 - 69</td>
+					<td>$ 250</td>
+				</tr>
+			</table>
+			<!----------------CNV-2--END----------->
+			<!----------------CNV-3---------------->
+			<table class="cnv3">
+				<tr>
+					<th colspan="4"><h2>TIER 3</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>VIDEO REVIEW</h2></th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing)</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Video Watching (Per Hour Pricing) - Non NDS</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>CAMERA INSTALLATION</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 260</td>
+				</tr>
+				<tr>
+					<td class="tdcl">24</td>
+					<td class="tdcl">Camera Installation (Additional Day)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours)</td>
+					<td>70 - 119</td>
+					<td>$ 520</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Camera Set-Up Freeway (Up to 24-Hours) (Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 240</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>RADAR (SPEED STUDY)</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">2</td>
+					<td class="tdcl">Radar Low Volume (2 Hours)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 200</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">Radar Low Volume (Additional Hour)</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 100</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar Average Volume (1 Hour)</td>
+					<td>70 - 119</td>
+					<td>$ 100</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Radar High Volume (<=1 Hour)</td>
+					<td>70 - 119</td>
+					<td>$ 85</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>GPS</h2></th>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Travel Time Hour</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 120</td>
+				</tr>
+				<tr>
+					<td class="tdcl">1</td>
+					<td class="tdcl">GPS Inventory Hour</td>
+					<td class="tdcl">70 - 119</td>
+					<td class="tdcl">$ 100</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>WAVETRONIX</h2></th>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation</td>
+					<td>70 - 119</td>
+					<td>$ 450</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Wavetronix Installation (Additional Day)</td>
+					<td>70 - 119</td>
+					<td>$ 300</td>
+				</tr>
+			</table>
+			<!----------------CNV-3--END----------->
+			<!----------------OTH------------------>
+			<table class="oth">
+				<tr>
+					<th colspan="4"><h2>ALL TIER</h2></th>
+				</tr>
+				<tr>
+					<th><div class="hourstd">HOURS</div></th>
+					<th><div class="stypetd">SERVICE TYPE DETAILS</div></th>
+					<th><div class="milagetd">MILAGE</div></th>
+					<th><div class="pricetd">PRICE</div></th>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>DATABASE</h2></th>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ITM (0-4 Hours)</td>
+					<td>NA</td>
+					<td>$ 50</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ITM (> 4 Hours)</td>
+					<td>NA</td>
+					<td>$ 75</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Volume</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Volume (Additional Day)</td>
+					<td>NA</td>
+					<td>$ 15</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Class OR Speed</td>
+					<td>NA</td>
+					<td>$ 50</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Class OR Speed (Additional Day)</td>
+					<td>NA</td>
+					<td>$ 25</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Class AND Speed</td>
+					<td>NA</td>
+					<td>$ 60</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Database Record ADT Class AND Speed (Additional Day)</td>
+					<td>NA</td>
+					<td>$ 35</td>
+				</tr>
+				<tr>
+					<th colspan="4"><h2>BLUETOOTH</h2></th>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Bluetooth Installation (Days 1 -7)</td>
+					<td>NA</td>
+					<td>$ 1250</td>
+				</tr>
+				<tr>
+					<td>NA</td>
+					<td>Bluetooth Installation (Additional Days 8+)</td>
+					<td>NA</td>
+					<td>$ 100</td>
+				</tr>
+			</table>
+			<!----------------OTH---END----------->
+		</div>
 	</div>
 	<!---------------RIGHT-SIDE-BODY-END-------->
 	</div>
