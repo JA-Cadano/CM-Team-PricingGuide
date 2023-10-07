@@ -312,6 +312,25 @@ function setTier3(){
 function getTier(){
 	var ml = document.getElementById("milage").value;
 	var servicetype = document.getElementById("stype").value;
+	var tc = document.getElementById("tech").value;
+	var tr = document.getElementById("trip").value;
+	var total1 = 0;
+	var total2 = 0;
+
+	total1 = ml * tc * 2 * tr * 0.13;
+	document.getElementById("fs1").value = total1.toFixed(2);
+
+	if(total1 <= 25){
+		total2 = 25;
+	}else if((total1 % 5) == 0 ){
+		total2 = total1;
+	}else{
+		total2 = total1 - (total1 % 5) + 5;
+	}
+
+	document.getElementById("fs2").value = total2.toFixed(2);
+
+
 
 	if(ml < 40){
 		document.getElementById("tier").value = 1;
@@ -600,4 +619,74 @@ function setOTH(){
 	setcnv2.style.display = "none";
 	setcnv3.style.display = "none";
 	setoth.style.display = "flex";
+}
+/*calcTMC To Be Finished*/
+function calcTmc(){
+	var tr = document.getElementById("tier").value;
+	var prson = document.getElementById("nperson").value;
+	var day = document.getElementById("ndays").value;
+	var hour = document.getElementById("nhour").value;
+	var total = 0;
+	var fttotal = 0;
+	var addp = 0;
+	var h2;
+	var h2p;
+	var h3;
+	var h3p;
+	var h4;
+	var h4h; 
+	var h4p;
+	var h4hp
+	var ft;
+
+	if(tr == 1){
+		h2 = 150;
+		h2p = 95;
+		h3 = 215;
+		h3p = 135;
+		h4 = 275;
+		h4h = 65;
+		h4p = 170;
+		h4hp = 40;
+		ft = 80;
+
+	}else if(tr == 2){
+		h2 = 170;
+		h2p = 110;
+		h3 = 235;
+		h3p = 145;
+		h4 = 295;
+		h4h = 70;
+		h4p = 190;
+		h4hp = 45;
+		ft = 85;
+	}else{
+		h2 = 200;
+		h2p = 120;
+		h3 = 270;
+		h3p = 165;
+		h4 = 330;
+		h4h = 80;
+		h4p = 215;
+		h4hp = 50;
+		ft= 90;
+	}
+
+	if(hour == 2){
+		total = h2 + (h2p * (prson - 1));
+		fttotal = h2;
+	}else if(hour == 3){
+		total = h3 + (h3p * (prson - 1));
+		fttotal = h3;
+	}else if(hour == 4){
+		total = h4 + (h4p * (prson - 1));
+		fttotal = h4;
+	}else if(hour > 4){
+		total = h4 + (h4p * (prson - 1)) + (h4hp * (hour - 4) * (prson - 1));
+		fttotal = h4 + (ft * (hour - 4))
+	}
+
+	document.getElementById("tprice").value = total.toFixed(2);
+	document.getElementById("ftprice").value = fttotal.toFixed(2);
+
 }
