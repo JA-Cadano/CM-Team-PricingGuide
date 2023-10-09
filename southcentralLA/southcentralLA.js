@@ -682,7 +682,7 @@ function calcTmc(){
 		total = h4 + (h4p * (prson - 1));
 		fttotal = h4;
 	}else if(hour > 4){
-		total = h4 + (h4p * (prson - 1)) + (h4hp * (hour - 4) * (prson - 1));
+		total = h4 + (h4p * (prson - 1)) + (h4hp * (hour - 4) * (prson - 1)) + (h4h * (hour - 4));
 		fttotal = h4 + (ft * (hour - 4))
 	}
 
