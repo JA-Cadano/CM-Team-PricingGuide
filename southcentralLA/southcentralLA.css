@@ -395,6 +395,7 @@
 	font-size: 18px;
 	margin-left: 30px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .leftside-body .lower-left .cnv-input{
@@ -544,7 +545,7 @@
 	text-align: center;
 }
 
-.rightside-body .rsbody-content .tdcl{
+.rightside-body .rsbody-content .tdcl,.tdcl2h,.tdcl2p,.tdcl4h,.tdcl4hh,.tdcl4p,.tdclhp{
 	background-color: grey;
 }
 

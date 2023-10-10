@@ -204,7 +204,7 @@
 						<tr>
 							<td>Number of Days</td>
 							<td>
-								<input type="text" id="ndays" value="1"></input>
+								<input type="text" id="ndays" value="1" onchange="calcTmc()"></input>
 							</td>
 						</tr>
 						<tr>
@@ -224,24 +224,24 @@
 				<div class="atr-input">
 					<div><h4>AUTOMATED TRAFFIC RECORDER</h4></div>
 					<div>
-						<select name="atr-com" class="atr-com" id="atr-com">
-							<option value="Volume" class="opt">Volume</option>
-							<option value="Class / Speed" class="opt">Class / Speed</option>
-							<option value="Class & Speed" class="opt">Class & Speed</option>
+						<select name="atr-com" class="atr-com" id="c-type" onchange="calcAtr()">
+							<option value="Volume" class="opt1">Volume</option>
+							<option value="Class / Speed" class="opt1">Class / Speed</option>
+							<option value="Class & Speed" class="opt1">Class & Speed</option>
 						</select>
 					</div>
 					<div>
-						<select name="atr-com" class="atr-com" id="atr-com">
-							<option value="Normal" class="opt">Normal</option>
-							<option value="Large" class="opt">Large</option>
-							<option value="Class & Speed" class="opt">Freeway</option>
+						<select name="atr-com" class="atr-com" id="r-type" onchange="calcAtr()">
+							<option value="Normal" class="opt2">Normal</option>
+							<option value="Large" class="opt2">Large</option>
+							<option value="Freeway" class="opt2">Freeway</option>
 						</select>
 					</div>
 					<div>
 						<table>
 							<tr>
 								<td>NUMBER OF DAYS</td>
-								<td><input type="text" name="ndays" id="ndays"></input></td>
+								<td><input type="text" name="atrNdays" id="atrNdays" onchange="calcAtr()"></input></td>
 							</tr>
 							<tr>
 								<td>ATR PRICE</td>
@@ -254,7 +254,7 @@
 				<div class="cnv-input">
 					<div><h4>CAM INSTALL & VIDEO REVIEW</h4></div>
 					<div class="rtype">
-						<select name="roadtype" class="roadtype" id="roadtype">
+						<select name="roadtype" class="roadtype" id="roadtype" onchange="calcCnv()">
 							<option value="NORMAL" class="roadopt">NORMAL</option>
 							<option value="FREEWAY" class="roadopt">FREEWAY</option>
 						</select>
@@ -264,19 +264,19 @@
 							<tr>
 								<td class="lsd">Number of Days</td>
 								<td>
-									<input type="text" name="numdays" id="numdays"></input>
+									<input type="text" name="numdays" id="numdays" onchange="calcCnv()"></input>
 								</td>
 							</tr>
 							<tr>
 								<td class="lsd">Number of Hours</td>
 								<td>
-									<input type="text" name="numhours" id="numhours"></input>
+									<input type="text" name="numhours" id="numhours" onchange="calcCnv()"></input>
 								</td>
 							</tr>
 							<tr>
 								<td class="lsd">Watch Speed</td>
 								<td>
-									<input type="text" name="wspeed" id="wspeed" value="1"></input>
+									<input type="text" name="wspeed" id="wspeed" value="1" onchange="calcCnv()"></input>
 								</td>
 							</tr>
 							<tr>
@@ -294,7 +294,7 @@
 							<tr>
 								<td class="lsd">Total Price</td>
 								<td>
-									<input type="text" name="tprice" id="tprice" value="" disabled/></input>
+									<input type="text" name="tprice" id="totalprice" value="0" disabled/></input>
 								</td>
 							</tr>
 						</table>
@@ -328,43 +328,43 @@
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 150</td>
 				</tr>
-				<tr>
+				<tr class="hour2psn">
 					<td class="tdcl">2</td>
 					<td class="tdcl">2 Hour (Additional Person</td>
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 95</td>
 				</tr>
-				<tr>
+				<tr class="hour3">
 					<td>3</td>
 					<td>3 Hour</td>
 					<td>< 40</td>
 					<td>$ 215</td>
 				</tr>
-				<tr>
+				<tr class="hour3psn">
 					<td>3</td>
 					<td>3 Hour (Additional Person</td>
 					<td>< 40</td>
 					<td>$ 135</td>
 				</tr>
-				<tr>
+				<tr class="hour4">
 					<td class="tdcl">4</td>
 					<td class="tdcl">4 Hour</td>
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 275</td>
 				</tr>
-				<tr>
+				<tr class="hour4hr">
 					<td class="tdcl">4</td>
 					<td class="tdcl">4 Hour (Additional Hour)</td>
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 65</td>
 				</tr>
-				<tr>
+				<tr class="hour4psn">
 					<td class="tdcl">4</td>
 					<td class="tdcl">4 Hour (Additional Person)</td>
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 170</td>
 				</tr>
-				<tr>
+				<tr class="psnhour">
 					<td class="tdcl">4</td>
 					<td class="tdcl">4 Hour (Additional Person, Additional Hour)</td>
 					<td class="tdcl">< 40</td>

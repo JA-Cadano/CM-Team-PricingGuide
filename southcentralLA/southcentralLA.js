@@ -17,6 +17,7 @@ let setcnv2 = document.querySelector(".cnv2");
 let setcnv3 = document.querySelector(".cnv3");
 let setoth = document.querySelector(".oth");
 
+
 function showNote(){
 	displayNote.style.display = "block";
 	btton.style.display = "none";
@@ -203,6 +204,9 @@ function setTier1(){
 		showatr.style.display = "none";
 		showcnv.style.display = "block";
 	}
+	calcTmc();
+	calcAtr();
+	calcCnv();
 }
 
 function setTier2(){
@@ -255,6 +259,9 @@ function setTier2(){
 		showatr.style.display = "none";
 		showcnv.style.display = "block";
 	}
+	calcTmc();
+	calcAtr();
+	calcCnv();
 }
 
 function setTier3(){
@@ -307,6 +314,9 @@ function setTier3(){
 		showatr.style.display = "none";
 		showcnv.style.display = "block";
 	}
+	calcTmc();
+	calcAtr();
+	calcCnv();
 }
 
 function getTier(){
@@ -477,6 +487,9 @@ function getTier(){
 			showcnv.style.display = "block";
 		}
 	}
+	calcTmc();
+	calcAtr();
+	calcCnv();
 }
 
 function setTMC(){
@@ -563,6 +576,7 @@ function setATR(){
 	showtmc.style.display = "none";
 	showatr.style.display = "block";
 	showcnv.style.display = "none";
+	alert(ctype);
 }
 
 function setCNV(){
@@ -658,7 +672,7 @@ function calcTmc(){
 		h4 = 295;
 		h4h = 70;
 		h4p = 190;
-		h4hp = 45;
+		h4hp = 45; 
 		ft = 85;
 	}else{
 		h2 = 200;
@@ -673,20 +687,162 @@ function calcTmc(){
 	}
 
 	if(hour == 2){
-		total = h2 + (h2p * (prson - 1));
+		total = (h2 + (h2p * (prson - 1))) * day;
 		fttotal = h2;
 	}else if(hour == 3){
-		total = h3 + (h3p * (prson - 1));
+		total = (h3 + (h3p * (prson - 1))) * day;
 		fttotal = h3;
 	}else if(hour == 4){
-		total = h4 + (h4p * (prson - 1));
+		total = (h4 + (h4p * (prson - 1))) * day;
 		fttotal = h4;
 	}else if(hour > 4){
-		total = h4 + (h4p * (prson - 1)) + (h4hp * (hour - 4) * (prson - 1)) + (h4h * (hour - 4));
-		fttotal = h4 + (ft * (hour - 4))
+		total = (h4 + (h4p * (prson - 1)) + (h4hp * (hour - 4) * (prson - 1)) + (h4h * (hour - 4))) * day;
+		fttotal = h4 + (ft * (hour - 4));
 	}
 
 	document.getElementById("tprice").value = total.toFixed(2);
 	document.getElementById("ftprice").value = fttotal.toFixed(2);
 
+}
+
+function calcAtr(){
+
+	var tr = document.getElementById("tier").value;
+	var ctype = document.getElementById("c-type").value;
+	var rtype = document.getElementById("r-type").value;
+	var nd = document.getElementById("atrNdays").value;
+	var price =  0;
+	
+	var vln = 0;   
+	var vlnp = 0;
+	var cosn = 0;
+	var cosnp = 0;
+	var casn = 0;
+	var casnp = 0;
+	var cosl = 0;
+	var coslp = 0;
+	var casl = 0;
+	var caslp = 0;
+	var vlf = 0;
+	var vlfp = 0;
+	var cosf = 0;
+	var cosfp = 0;
+	var casf = 0;
+	var casfp = 0;
+
+	if(tr == 1){
+		vln = 120;
+		vlnp = 70;
+		cosn = 160;
+		cosnp = 85;
+		casn = 175;
+		casnp = 95;
+		cosl = 220;
+		coslp = 115;
+		casl = 235;
+		caslp = 125;
+		vlf = 240;
+		vlfp = 140;
+		cosf = 320;
+		cosfp = 170;
+		casf = 350;
+		casfp = 190;
+	}else if(tr == 2){
+		vln = 140;
+		vlnp = 80;
+		cosn = 180;
+		cosnp = 95;
+		casn = 195;
+		casnp = 105;
+		cosl = 250;
+		coslp = 130;
+		casl = 265;
+		caslp = 140;
+		vlf = 280;
+		vlfp = 160;
+		cosf = 360;
+		cosfp = 190;
+		casf = 390;
+		casfp = 210;
+	}else if(tr == 3){
+		vln = 160;
+		vlnp = 90;
+		cosn = 200;
+		cosnp = 105;
+		casn = 215;
+		casnp = 115;
+		cosl = 280;
+		coslp = 145;
+		casl = 295;
+		caslp = 155;
+		vlf = 320;
+		vlfp = 180;
+		cosf = 400;
+		cosfp = 210;
+		casf = 430;
+		casfp = 230;
+	}
+
+	if(ctype == "Volume" && rtype == "Normal"){
+		price = vln + (vlnp * (nd - 1));
+	}else if(ctype == "Class / Speed" && rtype == "Normal"){
+		price = cosn + (cosnp * (nd - 1));
+	}else if(ctype == "Class & Speed" && rtype == "Normal"){
+		price = casn + (casnp * (nd - 1));
+	}else if(ctype == "Class / Speed" && rtype == "Large"){
+		price = cosl + (coslp * (nd - 1));
+	}else if (ctype == "Class & Speed" && rtype == "Large"){
+		price = casl + (caslp * (nd - 1));
+	}else if(ctype == "Volume" && rtype == "Freeway"){
+		price = vlf + (vlfp * (nd - 1));
+	}else if(ctype == "Class / Speed" && rtype == "Freeway"){
+		price = cosf + (cosfp * (nd - 1));
+	}else if(ctype == "Class & Speed" && rtype == "Freeway"){
+		price = casf + (casfp * (nd - 1));
+	}
+
+	document.getElementById("atrprice").value = price;
+}
+
+function calcCnv(){
+	var tr = document.getElementById("tier").value;
+	var rtype = document.getElementById("roadtype").value;
+	var nd = document.getElementById("numdays").value;
+	var nh = document.getElementById("numhours").value;
+	var ws = document.getElementById("wspeed").value;
+	var camins = 0;
+	var caminsp = 0;
+	var caminsfw = 0;
+	var caminsfwp = 0;
+	var caminsprice = 0;
+	var vidrev = 0;
+
+	if (tr == 1){
+		camins = 175;
+		caminsp = 80;
+		caminsfw = 350;
+		caminsfwp = 160;
+	}else if(tr == 2){
+		camins = 205;
+		caminsp = 95;
+		caminsfw = 410;
+		caminsfwp = 190;
+	}else if(tr == 3){
+		camins = 260;
+		caminsp = 120;
+		caminsfw = 520;
+		caminsfwp = 240;
+	}
+
+	if(rtype == "NORMAL"){
+		caminsprice = camins + (caminsp * (nd - 1));
+	}else if(rtype == "FREEWAY"){
+		caminsprice = caminsfw + (caminsfwp * (nd - 1));
+	}
+
+	vidrev = 35 * nd * nh / ws;
+
+	document.getElementById("ciprice").value = caminsprice;
+	document.getElementById("vrprice").value = vidrev;
+	document.getElementById("totalprice").value = caminsprice + vidrev;
 }
