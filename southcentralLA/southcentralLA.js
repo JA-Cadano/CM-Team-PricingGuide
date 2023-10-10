@@ -28,128 +28,84 @@ function closeNote(){
 	btton.style.display = "block";
 }
 
-function showTMC(){
-	var tr = document.getElementById("tier").value;
-	showtmc.style.display = "flex";
+function setTierItems(){
+	settmc1.style.display = "none";
+	settmc2.style.display = "none";
+	settmc3.style.display = "none";
+	setatr1.style.display = "none";
+	setatr2.style.display = "none";
+	setatr3.style.display = "none";
+	setcnv1.style.display = "none";
+	setcnv2.style.display = "none";
+	setcnv3.style.display = "none";
+	setoth.style.display = "none";
+}
+
+function showSvcType(){
+	showtmc.style.display = "none";
 	showatr.style.display = "none";
 	showcnv.style.display = "none";
+}
+
+function displayHeader(){
+	displayTier1.style.display = "none";
+	displayTier2.style.display = "none";
+	displayTier3.style.display = "none";
+}
+
+function showTMC(){
+	var tr = document.getElementById("tier").value;
+
+	showSvcType();
+	showtmc.style.display = "flex";
+	
 	if(tr == 1){
+		setTierItems();
 		settmc1.style.display = "flex";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
+		setTierItems();
 		settmc2.style.display = "flex";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
+		setTierItems();
 		settmc3.style.display = "flex";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}
 	document.getElementById("stype").value = "TMC";
 }
 
 function showATR(){
 	var tr = document.getElementById("tier").value;
-	showtmc.style.display = "none";
+
+	showSvcType();
 	showatr.style.display = "block";
-	showcnv.style.display = "none";
+	
 	if(tr == 1){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
+		setTierItems();
 		setatr1.style.display = "flex";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
+		setTierItems();
 		setatr2.style.display = "flex";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
+		setTierItems();
 		setatr3.style.display = "flex";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}
 	document.getElementById("stype").value = "ATR";
 }
 
 function showCNV(){
 	var tr = document.getElementById("tier").value;
-	showtmc.style.display = "none";
-	showatr.style.display = "none";
+
+	showSvcType();
 	showcnv.style.display = "block";
+
 	if(tr == 1){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
+		setTierItems();
 		setcnv1.style.display = "flex";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
+		setTierItems();
 		setcnv2.style.display = "flex";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
+		setTierItems();
 		setcnv3.style.display = "flex";
-		setoth.style.display = "none";
 	}
 	document.getElementById("stype").value = "CNV";
 }
@@ -157,51 +113,23 @@ function showCNV(){
 function setTier1(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 1;
+	displayHeader();
 	displayTier1.style.display = "flex";
-	displayTier2.style.display = "none";
-	displayTier3.style.display = "none";
 	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
+		setTierItems();
 		settmc1.style.display = "flex";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
+		showSvcType();
 		showtmc.style.display = "flex";
-		showatr.style.display = "none";
-		showcnv.style.display = "none";
 	}else if(servicetype == "ATR"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
+		setTierItems();
 		setatr1.style.display = "flex";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
+		showSvcType();
 		showatr.style.display = "block";
-		showcnv.style.display = "none";
 	}else if(servicetype == "CNV"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
+		setTierItems();
 		setcnv1.style.display = "flex";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
-		showatr.style.display = "none";
+		showSvcType();
 		showcnv.style.display = "block";
 	}
 	calcTmc();
@@ -212,51 +140,24 @@ function setTier1(){
 function setTier2(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 2;
-	displayTier1.style.display = "none";
+	displayHeader();
 	displayTier2.style.display = "flex";
-	displayTier3.style.display = "none";
+	
 	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
-		settmc1.style.display = "none";
+		setTierItems();
 		settmc2.style.display = "flex";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
+		showSvcType();
 		showtmc.style.display = "flex";
-		showatr.style.display = "none";
-		showcnv.style.display = "none";
 	}else if(servicetype == "ATR"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
+		setTierItems();
 		setatr2.style.display = "flex";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
+		showSvcType();
 		showatr.style.display = "block";
-		showcnv.style.display = "none";
 	}else if(servicetype == "CNV"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
+		setTierItems();
 		setcnv2.style.display = "flex";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
-		showatr.style.display = "none";
+		showSvcType();
 		showcnv.style.display = "block";
 	}
 	calcTmc();
@@ -267,51 +168,23 @@ function setTier2(){
 function setTier3(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 3;
-	displayTier1.style.display = "none";
-	displayTier2.style.display = "none";
+	displayHeader();
 	displayTier3.style.display = "flex";
 	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
+		setTierItems();
 		settmc3.style.display = "flex";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
+		showSvcType();
 		showtmc.style.display = "flex";
-		showatr.style.display = "none";
-		showcnv.style.display = "none";
 	}else if(servicetype == "ATR"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
+		setTierItems();
 		setatr3.style.display = "flex";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
+		showSvcType();
 		showatr.style.display = "block";
-		showcnv.style.display = "none";
 	}else if(servicetype == "CNV"){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
+		setTierItems();
 		setcnv3.style.display = "flex";
-		setoth.style.display = "none";
-		showtmc.style.display = "none";
-		showatr.style.display = "none";
+		showSvcType();
 		showcnv.style.display = "block";
 	}
 	calcTmc();
@@ -344,146 +217,63 @@ function getTier(){
 
 	if(ml < 40){
 		document.getElementById("tier").value = 1;
+		displayHeader();
 		displayTier1.style.display = "flex";
-		displayTier2.style.display = "none";
-		displayTier3.style.display = "none";
 		if(servicetype == "TMC"){
+			setTierItems();
 			settmc1.style.display = "flex";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
+			showSvcType();
 			showtmc.style.display = "flex";
-			showatr.style.display = "none";
-			showcnv.style.display = "none";
 		}else if(servicetype == "ATR"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
+			setTierItems();
 			setatr1.style.display = "flex";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
+			showSvcType();
 			showatr.style.display = "block";
-			showcnv.style.display = "none";
 		}else if(servicetype == "CNV"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
+			setTierItems();
 			setcnv1.style.display = "flex";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
-			showatr.style.display = "none";
+			showSvcType();
 			showcnv.style.display = "block";
 		}
 	} else if(ml < 70){
 		document.getElementById("tier").value = 2;
-		displayTier1.style.display = "none";
+		displayHeader();
 		displayTier2.style.display = "flex";
-		displayTier3.style.display = "none";
+
 		if(servicetype == "TMC"){
-			settmc1.style.display = "none";
+			setTierItems();
 			settmc2.style.display = "flex";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
+			showSvcType();
 			showtmc.style.display = "flex";
-			showatr.style.display = "none";
-			showcnv.style.display = "none";
 		}else if(servicetype == "ATR"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
+			setTierItems();
 			setatr2.style.display = "flex";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
+			showSvcType();
 			showatr.style.display = "block";
-			showcnv.style.display = "none";
 		}else if(servicetype == "CNV"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
+			setTierItems();
 			setcnv2.style.display = "flex";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
-			showatr.style.display = "none";
+			showSvcType();
 			showcnv.style.display = "block";
 		}
 	} else {
 		document.getElementById("tier").value = 3;
-		displayTier1.style.display = "none";
-		displayTier2.style.display = "none";
+		displayHeader();
 		displayTier3.style.display = "flex";
 		if(servicetype == "TMC"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
+			setTierItems();
 			settmc3.style.display = "flex";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
+			showSvcType();
 			showtmc.style.display = "flex";
-			showatr.style.display = "none";
-			showcnv.style.display = "none";
 		}else if(servicetype == "ATR"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
+			setTierItems();
 			setatr3.style.display = "flex";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
-			setcnv3.style.display = "none";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
+			showSvcType();
 			showatr.style.display = "block";
-			showcnv.style.display = "none";
 		}else if(servicetype == "CNV"){
-			settmc1.style.display = "none";
-			settmc2.style.display = "none";
-			settmc3.style.display = "none";
-			setatr1.style.display = "none";
-			setatr2.style.display = "none";
-			setatr3.style.display = "none";
-			setcnv1.style.display = "none";
-			setcnv2.style.display = "none";
+			setTierItems();
 			setcnv3.style.display = "flex";
-			setoth.style.display = "none";
-			showtmc.style.display = "none";
-			showatr.style.display = "none";
+			showSvcType();
 			showcnv.style.display = "block";
 		}
 	}
@@ -498,140 +288,56 @@ function setTMC(){
 	document.getElementById("stype").value = "TMC";
 
 	if(tr == 1){
+		setTierItems();
 		settmc1.style.display = "flex";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
+		setTierItems();
 		settmc2.style.display = "flex";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
+		setTierItems();
 		settmc3.style.display = "flex";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}
+	showSvcType();
 	showtmc.style.display = "flex";
-	showatr.style.display = "none";
-	showcnv.style.display = "none";
 }
 
 function setATR(){
 	var tr = document.getElementById("tier").value;
 	document.getElementById("stype").value = "ATR";
 	if(tr == 1){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
+		setTierItems();
 		setatr1.style.display = "flex";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
+		setTierItems();
 		setatr2.style.display = "flex";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
+		setTierItems();
 		setatr3.style.display = "flex";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}
-	showtmc.style.display = "none";
+	showSvcType();
 	showatr.style.display = "block";
-	showcnv.style.display = "none";
-	alert(ctype);
 }
 
 function setCNV(){
 	var tr = document.getElementById("tier").value;
 	document.getElementById("stype").value = "CNV";
 	if(tr == 1){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
+		setTierItems();
 		setcnv1.style.display = "flex";
-		setcnv2.style.display = "none";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else if(tr == 2){
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
+		setTierItems();
 		setcnv2.style.display = "flex";
-		setcnv3.style.display = "none";
-		setoth.style.display = "none";
 	}else{
-		settmc1.style.display = "none";
-		settmc2.style.display = "none";
-		settmc3.style.display = "none";
-		setatr1.style.display = "none";
-		setatr2.style.display = "none";
-		setatr3.style.display = "none";
-		setcnv1.style.display = "none";
-		setcnv2.style.display = "none";
+		setTierItems();
 		setcnv3.style.display = "flex";
-		setoth.style.display = "none";
 	}
-	showtmc.style.display = "none";
-	showatr.style.display = "none";
+	showSvcType();
 	showcnv.style.display = "block";
 }
 
 function setOTH(){
 	document.getElementById("stype").value = "OTH";
-	settmc1.style.display = "none";
-	settmc2.style.display = "none";
-	settmc3.style.display = "none";
-	setatr1.style.display = "none";
-	setatr2.style.display = "none";
-	setatr3.style.display = "none";
-	setcnv1.style.display = "none";
-	setcnv2.style.display = "none";
-	setcnv3.style.display = "none";
+	setTierItems();
 	setoth.style.display = "flex";
 }
 /*calcTMC To Be Finished*/
