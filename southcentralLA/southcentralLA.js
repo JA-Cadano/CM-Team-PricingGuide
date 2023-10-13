@@ -406,8 +406,8 @@ function calcTmc(){
 		fttotal = h4 + (ft * (hour - 4));
 	}
 
-	document.getElementById("tprice").value = total.toFixed(2);
-	document.getElementById("ftprice").value = fttotal.toFixed(2);
+	document.getElementById("tprice").value = total;
+	document.getElementById("ftprice").value = fttotal;
 
 }
 

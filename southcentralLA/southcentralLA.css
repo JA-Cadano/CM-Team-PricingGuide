@@ -53,6 +53,7 @@
 	padding: 5px 0;
 	width: 30%;
 	margin-left: 5px;
+	color: red;
 }
 
 .bottomheader .mpart{
@@ -76,6 +77,7 @@
 	border-color: black;
 	border-radius: 10px;
 	background-color: yellowgreen;
+	box-shadow: 0px 5px 0px;
 }
 
 /*-------------BOTTOM HEADER END--------------*/
@@ -206,6 +208,7 @@
 	border-style: solid;
 	border-radius: 10px;
 	background-color: yellowgreen;
+	box-shadow: 0px 5px 0px;
 }
 
 .leftside-body .upper-left .upperl-content2 .hdr1{
@@ -236,10 +239,11 @@
 .leftside-body .upper-left .upperl-content2 .content2{
 	border-style: solid;
 	border-radius: 10px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	margin-left: 5px;
 	width: 95%;
 	background-color: yellowgreen;
+	box-shadow: 0px 5px 0px;
 }
 
 .leftside-body .upper-left .upperl-content2 .content2 h3{
@@ -315,8 +319,6 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-content: center;
-	border-style: solid;
-	border-color: black;
 	margin: 0 20px;
 	height: 30px;
 	padding: 5px 0;
@@ -330,6 +332,7 @@
 	font-weight: bolder;
 	border-radius: 15px;
 	background-color: yellowgreen;
+	box-shadow: 0px 5px 0px;
 }
 
 .leftside-body .lower-left .tmc-input{
@@ -546,7 +549,7 @@
 }
 
 .rightside-body .rsbody-content .tdcl,.tdcl2h,.tdcl2p,.tdcl4h,.tdcl4hh,.tdcl4p,.tdclhp{
-	background-color: grey;
+	background-color: tomato;
 }
 
 .rightside-body .rsbody-content .hourstd{
