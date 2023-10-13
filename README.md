@@ -1,2 +1,2 @@
 # CM-Team-PricingGuide
-next to create northeastMA
+Next to create northeastMA.
