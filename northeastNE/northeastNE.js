@@ -536,7 +536,7 @@ function calcCnv(){
 		caminsprice = caminsfw + (caminsfwp * (nd - 1));
 	}
 
-	vidrev = 30 * nd * nh / ws;
+	vidrev = 35 * nd * nh / ws;
 
 	document.getElementById("ciprice").value = caminsprice;
 	document.getElementById("vrprice").value = vidrev;
