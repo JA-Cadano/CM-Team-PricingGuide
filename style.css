@@ -20,6 +20,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	height: 50px;
+
 }
 /*HEADER & NAVIGATION END*/
 
@@ -32,12 +33,19 @@
 	margin-top: 5px;
 	padding-top: 50px;
 	padding-bottom: 390px;
+	width: 100%;
+	height: 95vh;
 	margin-bottom: 10px;
+	background-image: url('./images/intersectin.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .grp div{
-	padding: 10px;
-	color: yellowgreen;
+	padding: 30px;
+	margin-left: 30px;
+	text-align: left;
+	color: tomato;
 }
 
 .ftr{
@@ -50,3 +58,4 @@
 	font-weight: bold;
 	border-color: red;
 }
+
