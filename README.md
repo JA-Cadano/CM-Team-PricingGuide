@@ -1,2 +1,2 @@
 # CM-Team-PricingGuide
-Next to create northeastMA.
+NORCAL &  SOCAL NOTES NEED TO BE UPDATED
