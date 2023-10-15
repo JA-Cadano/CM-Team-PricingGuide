@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	background-color: darkgrey;
+	font-family: sans-serif;
 }
 
 /*------------------HEADER TOP---------------------------*/
@@ -16,14 +17,16 @@
 	margin: 10px;
 }
 
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .topheader .thl-1{
 	margin-left: 7px;
 	margin-top: 10px;
 	margin-bottom: 5px;
 	width: 10%;
-	background-image: url("../images/ourLogo-02.png");
-	background-repeat: no-repeat;
-	background-size: 115px 30px;
 }
 
 .topheader .thl-2{
