@@ -280,6 +280,23 @@ img{
 	align-content: center;
 }
 
+.leftside-body .lower-left .lowerl-content1 .boxt{
+	width: 100px;
+	height: 25px;
+}
+
+.leftside-body .lower-left .lowerl-content1 .green{
+	background-color: green;
+}
+
+.leftside-body .lower-left .lowerl-content1 .orange{
+	background-color: orange;
+}
+
+.leftside-body .lower-left .lowerl-content1 .red{
+	background-color: red;
+}
+
 .leftside-body .lower-left .lowerl-content1 input{
 	width: 50px;
 	text-align: center;
