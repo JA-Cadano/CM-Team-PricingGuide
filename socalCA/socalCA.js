@@ -193,28 +193,35 @@ function setTier3(){
 }
 
 function getTier(){
-	var ml = document.getElementById("milage").value;
+	var tc = document.getElementById("tier-color").value;
 	var servicetype = document.getElementById("stype").value;
-	var tc = document.getElementById("tech").value;
-	var tr = document.getElementById("trip").value;
-	var total1 = 0;
-	var total2 = 0;
+	var nloc = document.getElementById("numloc").value;
+	var total = 0;
 
-	total1 = ml * tc * 2 * tr * 0.13;
-	document.getElementById("fs1").value = total1.toFixed(2);
-
-	if(total1 <= 25){
-		total2 = 25;
-	}else if((total1 % 5) == 0 ){
-		total2 = total1;
-	}else{
-		total2 = total1 - (total1 % 5) + 5;
+	if(tc == "Green" && nloc <= 10){
+		total = 30;
+	}else if(tc == "Green" && nloc <= 19){
+		total = 50;
+	}else if(tc == "Green" && nloc >= 20){
+		total = 70;
+	}else if(tc == "Orange" && nloc <= 10){
+		total = 40;
+	}else if(tc == "Orange" && nloc <= 19){
+		total = 60;
+	}else if(tc == "Orange" && nloc >= 20){
+		total = 80;
+	}else if(tc == "Red" && nloc <= 10){
+		total = 50;
+	}else if(tc == "Red" && nloc <= 19){
+		total = 70;
+	}else if(tc == "Red" && nloc >= 20){
+		total = 80;
 	}
 
-	document.getElementById("fs2").value = total2.toFixed(2);
+	document.getElementById("fs2").value = total;
 
 
-	if(ml < 40){
+	if(tc == "Green"){
 		document.getElementById("tier").value = 1;
 		displayHeader();
 		displayTier1.style.display = "flex";
@@ -234,7 +241,7 @@ function getTier(){
 			showSvcType();
 			showcnv.style.display = "block";
 		}
-	} else if(ml < 70){
+	} else if(tc == "Orange"){
 		document.getElementById("tier").value = 2;
 		displayHeader();
 		displayTier2.style.display = "flex";

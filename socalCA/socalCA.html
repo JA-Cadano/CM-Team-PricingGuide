@@ -124,18 +124,20 @@
 				<div class="con1-l">
 					<table>
 						<tr>
-							<td><h3>Milage</h3></td>
+							<td><h3>Loc Color</h3></td>
 							<td>
-								<form>
-									<input type="text" name="milage" id="milage" onchange="getTier()"></input>
-								</form>
+								<select id="tier-color" class="boxt" onchange="getTier()">
+									<option value="Green" class="green" id="green">Green</option>
+									<option value="Orange" class="orange" id="orange">Orange</option>
+									<option value="Red" class="red" id="red">Red</option>
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<td><h3>Tech</h3></td>
+							<td><h3># of Loc</h3></td>
 							<td>
 								<form>
-									<input type="text" name="tech" id="tech" value="1"></input>
+									<input type="text" name="tech" id="numloc" value="1" onchange="getTier()"></input>
 								</form>
 							</td>
 						</tr>
@@ -155,7 +157,7 @@
 							<td><h3>Trip</h3></td>
 							<td>
 								<form>
-									<input type="text" name="trip" id="trip" value="2"></input>
+									<input type="text" name="trip" id="trip" value="NA" disabled></input>
 								</form>
 							</td>
 						</tr>
@@ -168,7 +170,7 @@
 						<td><h3>FUEL SURCHARGE</h3></td>
 						<td>
 							<form>
-								<input type="text" name="fs1" id="fs1" disabled/></input>
+								<input type="text" name="fs1" value="NA" id="fs1" disabled/></input>
 							</form>
 						</td>
 						<td>
@@ -329,7 +331,7 @@
 				</tr>
 				<tr class="hour2psn">
 					<td class="tdcl">2</td>
-					<td class="tdcl">2 Hour (Additional Person)</td>
+					<td class="tdcl">2 Hour (Additional Person</td>
 					<td class="tdcl">< 40</td>
 					<td class="tdcl">$ 70</td>
 				</tr>
@@ -341,7 +343,7 @@
 				</tr>
 				<tr class="hour3psn">
 					<td>3</td>
-					<td>3 Hour (Additional Person)</td>
+					<td>3 Hour (Additional Person</td>
 					<td>< 40</td>
 					<td>$ 105</td>
 				</tr>
@@ -370,7 +372,7 @@
 					<td class="tdcl">$ 35</td>
 				</tr>
 				<tr>
-					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+					<th colspan="4"><h2>2 PERSON CALCULATED RATE</h2></th>
 				</tr>
 				<tr>
 					<td>2</td>
@@ -491,7 +493,7 @@
 					<td class="tdcl">$ 45</td>
 				</tr>
 				<tr>
-					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+					<th colspan="4"><h2>2 PERSON CALCULATED RATE</h2></th>
 				</tr>
 				<tr>
 					<td>2</td>
@@ -612,7 +614,7 @@
 					<td class="tdcl">$ 50</td>
 				</tr>
 				<tr>
-					<th colspan="4"><h2>2 PERSONCALCULATED RATE</h2></th>
+					<th colspan="4"><h2>2 PERSON CALCULATED RATE</h2></th>
 				</tr>
 				<tr>
 					<td>2</td>
