@@ -397,7 +397,7 @@ function calcTmc(){
 	}
 
 	document.getElementById("tprice").value = total;
-	document.getElementById("ftprice").value = fttotal;
+	document.getElementById("ftprice").value = fttotal * day;
 
 }
 
