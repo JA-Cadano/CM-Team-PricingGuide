@@ -287,6 +287,8 @@ img{
 .leftside-body .lower-left .lowerl-content1 .boxt{
 	width: 100px;
 	height: 25px;
+	text-align: center;
+	background-color: green;
 }
 
 .leftside-body .lower-left .lowerl-content1 .green{
@@ -302,7 +304,7 @@ img{
 }
 
 .leftside-body .lower-left .lowerl-content1 input{
-	width: 50px;
+	width: 90px;
 	text-align: center;
 	font-size: 15px;
 	font-weight: bold;
