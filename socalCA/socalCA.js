@@ -16,7 +16,7 @@ let setcnv1 = document.querySelector(".cnv1");
 let setcnv2 = document.querySelector(".cnv2");
 let setcnv3 = document.querySelector(".cnv3");
 let setoth = document.querySelector(".oth");
-
+let bt = document.querySelector(".boxt");
 
 function showNote(){
 	displayNote.style.display = "block";
@@ -111,11 +111,13 @@ function showCNV(){
 }
 
 function setTier1(){
+	var nloc = document.getElementById("numloc").value;
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 1;
+	bt.style.backgroundColor = "green";
+	var total = 0;
 	displayHeader();
 	displayTier1.style.display = "flex";
-	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
 		setTierItems();
 		settmc1.style.display = "flex";
@@ -132,18 +134,30 @@ function setTier1(){
 		showSvcType();
 		showcnv.style.display = "block";
 	}
+
+	if(nloc <= 10){
+		total = 30;
+	}else if(nloc <= 19){
+		total = 50;
+	}else if(nloc >= 20){
+		total = 70;
+	}
+
+	document.getElementById("fs2").value = total;
+
 	calcTmc();
 	calcAtr();
 	calcCnv();
 }
 
 function setTier2(){
+	var nloc = document.getElementById("numloc").value;
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 2;
+	bt.style.backgroundColor = "orange";
+	var total = 0;
 	displayHeader();
 	displayTier2.style.display = "flex";
-	
-	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
 		setTierItems();
 		settmc2.style.display = "flex";
@@ -160,17 +174,30 @@ function setTier2(){
 		showSvcType();
 		showcnv.style.display = "block";
 	}
+
+	if(nloc <=10){
+		total = 40;
+	}else if(nloc <= 19){
+		total = 60;
+	}else if(nloc >= 20){
+		total = 80;
+	}
+
+	document.getElementById("fs2").value = total;
+
 	calcTmc();
 	calcAtr();
 	calcCnv();
 }
 
 function setTier3(){
+	var nloc	= document.getElementById("numloc").value;
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 3;
+	bt.style.backgroundColor = "red";
+	var total = 0;
 	displayHeader();
 	displayTier3.style.display = "flex";
-	document.getElementById("milage").value = "";
 	if(servicetype == "TMC"){
 		setTierItems();
 		settmc3.style.display = "flex";
@@ -181,12 +208,24 @@ function setTier3(){
 		setatr3.style.display = "flex";
 		showSvcType();
 		showatr.style.display = "block";
+		alert("atr");
 	}else if(servicetype == "CNV"){
 		setTierItems();
 		setcnv3.style.display = "flex";
 		showSvcType();
 		showcnv.style.display = "block";
 	}
+
+	if(nloc <= 10){
+		total = 50;
+	}else if(nloc <= 19){
+		total = 70;
+	}else if(nloc >= 20){
+		total = 80;
+	}
+
+	document.getElementById("fs2").value = total;
+
 	calcTmc();
 	calcAtr();
 	calcCnv();
@@ -241,6 +280,7 @@ function getTier(){
 			showSvcType();
 			showcnv.style.display = "block";
 		}
+		bt.style.backgroundColor = "green";
 	} else if(tc == "Orange"){
 		document.getElementById("tier").value = 2;
 		displayHeader();
@@ -262,6 +302,7 @@ function getTier(){
 			showSvcType();
 			showcnv.style.display = "block";
 		}
+		bt.style.backgroundColor = "orange";
 	} else {
 		document.getElementById("tier").value = 3;
 		displayHeader();
@@ -282,6 +323,7 @@ function getTier(){
 			showSvcType();
 			showcnv.style.display = "block";
 		}
+		bt.style.backgroundColor = "red";
 	}
 	calcTmc();
 	calcAtr();
