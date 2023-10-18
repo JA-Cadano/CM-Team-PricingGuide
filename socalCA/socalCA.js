@@ -115,6 +115,7 @@ function setTier1(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 1;
 	bt.style.backgroundColor = "green";
+	document.getElementById("tier-color").value = "Green";
 	var total = 0;
 	displayHeader();
 	displayTier1.style.display = "flex";
@@ -155,6 +156,7 @@ function setTier2(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 2;
 	bt.style.backgroundColor = "orange";
+	document.getElementById("tier-color").value = "Orange";
 	var total = 0;
 	displayHeader();
 	displayTier2.style.display = "flex";
@@ -195,6 +197,7 @@ function setTier3(){
 	var servicetype = document.getElementById("stype").value;
 	document.getElementById("tier").value = 3;
 	bt.style.backgroundColor = "red";
+	document.getElementById("tier-color").value = "Red";
 	var total = 0;
 	displayHeader();
 	displayTier3.style.display = "flex";
