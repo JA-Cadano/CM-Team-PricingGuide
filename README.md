@@ -1,3 +1,3 @@
 # CM-Team-PricingGuide
-NORCAL &  SOCAL NOTES NEED TO BE UPDATED
+
 
