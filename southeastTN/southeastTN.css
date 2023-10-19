@@ -61,8 +61,8 @@ img{
 }
 
 .bottomheader .lpart{
-	padding: 5px 0;
-	width: 30%;
+	padding: 10px 0;
+	width: 60%;
 	margin-left: 5px;
 	color: red;
 }
@@ -74,6 +74,7 @@ img{
 	justify-content: center;
 	align-content: center;
 	width: 50%;
+	color: red;
 }
 
 .bottomheader .rpart{
