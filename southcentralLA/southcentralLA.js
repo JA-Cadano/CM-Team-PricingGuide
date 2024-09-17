@@ -200,7 +200,7 @@ function getTier(){
 	var total1 = 0;
 	var total2 = 0;
 
-	total1 = ml * tc * 2 * tr * 0.13;
+	total1 = ml * tc * 2 * tr * 0.20;
 	document.getElementById("fs1").value = total1.toFixed(2);
 
 	if(total1 <= 25){
